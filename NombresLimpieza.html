@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inspira Negocios - Nombres DivertidoSs</title>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            archivo: ['"Archivo Black"', 'sans-serif']
+          },
+          colors: {
+            principal: '#00B9C7'
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    html {
+    scroll-behavior: smooth;
+    }
+    body {
+      background-image: url('assets/images/Comunes/fondo.png');
+      background-repeat: repeat;
+      background-size: 700px;
+      background-attachment: fixed;
+      background-color: #f5f5f5;
+    }
+    .nube {
+      animation: flotar 6s ease-in-out infinite;
+    }
+    @keyframes flotar {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(50px); }
+      100% { transform: translateY(0px); }
+    }
+  </style>
+</head>
+<body class="font-archivo text-[#222] bg-white px-10 sm:px-24 pt-6">
+  <header class="flex justify-between items-center flex-wrap mb-6">
+
+    <div class="flex items-center gap-4">
+      <img src="assets\images\Comunes\logo.png" alt="Logo Inspira Negocios" class="h-20">
+      <div>
+        <!-- <strong class="text-xl">INSPIRA</strong><br>
+        <span class="font-sans text-sm">NEGOCIOS</span> -->
+      </div>
+    </div>
+
+    <nav>
+       <!-- Botón Hamburguesa -->
+        <button id="menu-btn" class="md:hidden text-gray-700 focus:outline-none">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+
+          <ul class="hidden md:flex gap-6 text-gray-700">
+              <li><a href="#"  class="text-principal border-2 border-principal px-3 py-1 rounded-full text-sm font-bold font-sans hover:bg-principal hover:text-white transition" >INICIO</a></li>
+              <li><a href="#"  class="text-principal border-2 border-principal px-3 py-1 rounded-full text-sm font-bold font-sans hover:bg-principal hover:text-white transition" >LOS MEJORES NOMBRES PARA MI NEGOCIO</a></li>
+              <li><a href="#"  class="text-principal border-2 border-principal px-3 py-1 rounded-full text-sm font-bold font-sans hover:bg-principal hover:text-white transition" >¿QUIÉN HIZO ESTA PÁGINA?</a></li>  
+          </ul>
+
+          <!-- Menú móvil -->
+        <div id="mobile-menu" class="hidden md:hidden px-4  ">
+          <ul class="flex flex-col space-y-2 py-2">
+            <li><a href="#"  class="text-principal border-2 border-principal px-3 py-1 rounded-full text-sm font-bold font-sans hover:bg-principal hover:text-white transition" >INICIO</a></li>
+              <li><a href="#"  class="text-principal border-2 border-principal px-3 py-1 rounded-full text-sm font-bold font-sans hover:bg-principal hover:text-white transition" >LOS MEJORES NOMBRES PARA MI NEGOCIO</a></li>
+              <li><a href="#"  class="text-principal border-2 border-principal px-3 py-1 rounded-full text-sm font-bold font-sans hover:bg-principal hover:text-white transition" >¿QUIÉN HIZO ESTA PÁGINA?</a></li>  
+          </ul>
+        </div>
+
+        <script>
+          const menuBtn = document.getElementById('menu-btn');
+          const mobileMenu = document.getElementById('mobile-menu');
+
+          menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+          });
+        </script>
+    </nav>
+
+    <!-- <nav class="flex gap-2 flex-wrap mt-2 sm:gap-3 sm:mt-4 text-sm sm:text-base">
+      <a href="#" class="text-principal border-2 border-principal px-3 py-1 rounded-full text-sm font-bold font-sans hover:bg-principal hover:text-white transition">INICIO</a>
+      <a href="#" class="text-principal border-2 border-principal px-3 py-1 rounded-full text-sm font-bold font-sans hover:bg-principal hover:text-white transition">MAS TENDENCIA DE NOMBRES EN 2025</a>
+      <a href="#" class="text-principal border-2 border-principal px-3 py-1 rounded-full text-sm font-bold font-sans hover:bg-principal hover:text-white transition">¿QUIÉN HIZO ESTA PÁGINA?</a>
+    </nav> -->
+    
+  </header>
+
+  <main class="flex flex-wrap justify-between items-start gap-10 mt-10">
+    <div class="max-w-xl pr-6">
+      <h1 class="text-principal text-5xl sm:text-5x1 font-bold leading-tight mb-4">100 NOMBRES GRATIS PARA TU NEGOCIO DE LIMPIEZA</h1>
+      <p class="text-base sm:text-lg leading-relaxed text-gray-800 font-sans mb-6">
+        ¿Estás por iniciar tu negocio de limpieza? Te ayudamos con 100 nombres únicos, memorables y listos para usar. ¡Haz que tu marca brille desde el primer día!
+      </p>
+      <a href="#nombres" class="inline-block border-4 border-principal text-principal font-bold uppercase text-xl px-8 py-3 rounded-full shadow-lg hover:bg-principal hover:text-white transition duration-500">MÍRALOS AQUÍ</a>
+</div>
+    <div class="relative max-w-md">
+      <img src="assets/images/Comunes/nube.png" alt="nube decorativa" class="absolute -top-20 -left-20 w-[120%] opacity-40 nube">
+      <img src="assets\images\Limpieza/ilustracion.png" alt="vector animado de personas limpiando png" class="relative z-10 w-full h-auto">
+    </div>
+  </main>
+
+  <div class="p-2 flex flex-col items-left mt-24 w-full" >
+      <h2 class="pt-6 sm:text-4xl text-principal font-bold mb-6">ELLOS YA DIERON EL PRIMER PASO, ¿Y TÚ?</h2>
+      <p class="text-base sm:text-lg leading-relaxed text-gray-800 font-sans mb-6">
+       Mira estas increíbles marcas de limpieza que ya están en marcha.Te regalamos 100 nombres únicos y listos para usar para que tú también empieces con fuerza. 🌟 ¡Inspírate, elige tu nombre y haz que tu negocio brille desde el primer día!</p>
+      <div class="relative w-full max-w-xl mx-auto overflow-hidden rounded-lg">
+
+        <div class="flex transition-transform duration-500 ease-in-out" id="carousel-images">
+          <img src="assets\images\Limpieza/imagen1.jpg" class="w-full shrink-0" />
+          <img src="assets\images\Limpieza/imagen2.jpg" class="w-full shrink-0" />
+          <img src="assets\images\Limpieza/imagen3.jpg" class="w-full shrink-0" />
+          <img src="assets\images\Limpieza/imagen4.jpg" class="w-full shrink-0" />
+          <img src="assets\images\Limpieza/imagen5.jpg" class="w-full shrink-0" />
+          <img src="assets\images\Limpieza/imagen6.jpg"class="w-full shrink-0" />
+          <img src="assets\images\Limpieza/imagen7.jpg" class="w-full shrink-0" />
+        </div>
+
+      <!-- Botones -->
+        <button onclick="prevSlide()" class="absolute top-1/2 left-2 -translate-y-1/2 bg-black/50 text-white p-2 rounded-full">
+          ‹
+        </button>
+        <button onclick="nextSlide()" class="absolute top-1/2 right-2 -translate-y-1/2 bg-black/50 text-white p-2 rounded-full">
+          ›
+        </button>
+  </div>
+</div>
+<script>
+  const images = document.getElementById("carousel-images");
+  const totalSlides = images.children.length;
+  let index = 0;
+
+  function showSlide(i) {
+    index = (i + totalSlides) % totalSlides;
+    images.style.transform = `translateX(-${index * 100}%)`;
+  }
+
+  function nextSlide() {
+    showSlide(index + 1);
+  }
+
+  function prevSlide() {
+    showSlide(index - 1);
+  }
+</script>
+
+<div class="flex justify-center items-center gap-4 p-8 ">
+    <button onclick="generarNombre()" class="inline-block border-4 border-principal text-principal font-bold uppercase text-xl px-8 py-3 rounded-full shadow-lg hover:bg-principal hover:text-white transition duration-500">Generar nombre I.A</button>
+    <p id="resultado" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal"></p>
+</div>
+
+<script>
+  const nombres = [
+  "Limpio Total","BrillaYa","Eco Limpieza","ProClean Express","Manos Limpias","BrilloSeguro","Limpieza ProMax","Hogar Impecable","Sparkle Casa","Brillanet","FullClean Servicios","LimpiaRápido","CleanForce","EcoBrillo","Ultra Limpio","Casa Nítida","ShinePro","Limpieza Ideal","Pulcro Hogar","Brilla Fácil","CleanNow","Lavado Supremo","Total Brillo","Limpieza Zen","Brillo Express","Casa Clara","Flash Limpieza","LimpioFix","Crystal Hogar","LimpiaYa Servicios","LimpioPro","BrilloMax","EcoCasa","CleanExpress","PulcroYa","ShineTotal","LimpiaFácil","BrillaNet","CasaPerfecta","ProLimpieza","HogarClaro","CleanSmart","LimpioYa","EcoSpark","LimpiezaPlus","LimpiaZen","BrillaHome","UltraClean","SparkPro","LimpiaSeguro","CleanFast","Hogar Brillante","BrilloReal","TotalLimpio","LimpiaExpress","EcoTotal","CleanStyle","Brillando","CasaLimpia","Limpieza Flash"
+  ];
+
+  function generarNombre() {
+    const aleatorio = nombres[Math.floor(Math.random() * nombres.length)];
+    document.getElementById("resultado").innerText = aleatorio;
+  }
+</script>
+
+
+  <section id="nombres" class="mt-24">
+    <h2 class="pt-4 text-3xl sm:text-4xl text-principal font-bold mb-6">Explora por categoría</h2>
+
+    <div class="flex flex-wrap gap-3 mb-10">
+      <button onclick="filtrar('Hogar')" class="px-4 py-2 border-2 border-principal text-principal rounded-full hover:bg-principal hover:text-white transition">Hogar</button>
+      <button onclick="filtrar('Servicio General')" class="px-4 py-2 border-2 border-principal text-principal rounded-full hover:bg-principal hover:text-white transition">Servicio General</button>
+      <button onclick="filtrar('Elegante')" class="px-4 py-2 border-2 border-principal text-principal rounded-full hover:bg-principal hover:text-white transition">Elegante</button>
+      <button onclick="filtrar('Divertido')" class="px-4 py-2 border-2 border-principal text-principal rounded-full hover:bg-principal hover:text-white transition">Divertido</button>
+      <button onclick="filtrar('Ingles')" class="px-4 py-2 border-2 border-principal text-principal rounded-full hover:bg-principal hover:text-white transition">Ingles</button>
+    </div>
+
+    <div id="lista-nombres" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div data-cat="Hogar" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Limpia Tu Espacio</h3>
+        <p class="text-sm text-gray-600 mt-1">Hogar</p>
+      </div>
+      <div data-cat="Hogar" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Casa Reluciente</h3>
+        <p class="text-sm text-gray-600 mt-1">Hogar</p>
+      </div>
+      <div data-cat="Hogar" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Hogar Impecable</h3>
+        <p class="text-sm text-gray-600 mt-1">Hogar</p>
+      </div>
+      <div data-cat="Hogar" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Rincón Pulcro</h3>
+        <p class="text-sm text-gray-600 mt-1">Hogar</p>
+      </div>
+      <div data-cat="Hogar" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Limpieza Serena</h3>
+        <p class="text-sm text-gray-600 mt-1">Hogar</p>
+      </div>
+      <div data-cat="Hogar" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Brillo Familiar</h3>
+        <p class="text-sm text-gray-600 mt-1">Hogar</p>
+      </div>
+      <div data-cat="Hogar" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Cuidamos Tu Casa</h3>
+        <p class="text-sm text-gray-600 mt-1">Hogar</p>
+      </div>
+      <div data-cat="Hogar" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Todo en Orden</h3>
+        <p class="text-sm text-gray-600 mt-1">Hogar</p>
+      </div>
+      <div data-cat="Hogar" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Familia Limpia</h3>
+        <p class="text-sm text-gray-600 mt-1">Hogar</p>
+      </div>
+      <div data-cat="Hogar" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Casa Sana</h3>
+        <p class="text-sm text-gray-600 mt-1">Hogar</p>
+      </div>
+      <div data-cat="Hogar" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">LimpiaHogar Express</h3>
+        <p class="text-sm text-gray-600 mt-1">Hogar</p>
+      </div>
+      <div data-cat="Hogar" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Estilo Hogar</h3>
+        <p class="text-sm text-gray-600 mt-1">Hogar</p>
+      </div>
+      <div data-cat="Hogar" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Manos al Hogars</h3>
+        <p class="text-sm text-gray-600 mt-1">Hogar</p>
+      </div>
+      <div data-cat="Hogar" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Dulce Orden</h3>
+        <p class="text-sm text-gray-600 mt-1">Hogar</p>
+      </div>
+      <div data-cat="Hogar" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Pulcro y Perfecto</h3>
+        <p class="text-sm text-gray-600 mt-1">Hogar</p>
+      </div>
+      <div data-cat="Hogar" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Armonía Doméstica</h3>
+        <p class="text-sm text-gray-600 mt-1">Hogar</p>
+      </div>
+      <div data-cat="Hogar" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">HogarZen</h3>
+        <p class="text-sm text-gray-600 mt-1">Hogar</p>
+      </div>
+      <div data-cat="Hogar" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Cero Polvo</h3>
+        <p class="text-sm text-gray-600 mt-1">Hogar</p>
+      </div>
+      <div data-cat="Hogar" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Mamá Feliz</h3>
+        <p class="text-sm text-gray-600 mt-1">Hogar</p>
+      </div>
+      <div data-cat="Hogar" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Orden Ideal</h3>
+        <p class="text-sm text-gray-600 mt-1">Hogar</p>
+      </div>
+
+
+
+
+
+    
+      <div data-cat="Servicio General" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">ProLimpieza</h3>
+        <p class="text-sm text-gray-600 mt-1">Servicio General</p>
+      </div>
+      <div data-cat="Servicio General" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Soluciones Limpias</h3>
+        <p class="text-sm text-gray-600 mt-1">Servicio General</p>
+      </div>
+      <div data-cat="Servicio General" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Servicio Total</h3>
+        <p class="text-sm text-gray-600 mt-1">Servicio General</p>
+      </div>
+      <div data-cat="Servicio General" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Global Limpio</h3>
+        <p class="text-sm text-gray-600 mt-1">Servicio General</p>
+      </div>
+      <div data-cat="Servicio General" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">LimpiaYa</h3>
+        <p class="text-sm text-gray-600 mt-1">Servicio General</p>
+      </div>
+      <div data-cat="Servicio General" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Escuadrón de Limpieza</h3>
+        <p class="text-sm text-gray-600 mt-1">Servicio General</p>
+      </div>
+      <div data-cat="Servicio General" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Tu Espacio Limpio</h3>
+        <p class="text-sm text-gray-600 mt-1">Servicio General</p>
+      </div>
+      <div data-cat="Servicio General" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Siempre Brillando</h3>
+        <p class="text-sm text-gray-600 mt-1">Servicio General</p>
+      </div>
+      <div data-cat="Servicio General" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Pulcro Pro</h3>
+        <p class="text-sm text-gray-600 mt-1">Servicio General</p>
+      </div>
+      <div data-cat="Servicio General" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Rápido y Brillante</h3>
+        <p class="text-sm text-gray-600 mt-1">Servicio General</p>
+      </div>
+      <div data-cat="Servicio General" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">CleanForce</h3>
+        <p class="text-sm text-gray-600 mt-1">Servicio General</p>
+      </div>
+      <div data-cat="Servicio General" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Limpieza Urbana</h3>
+        <p class="text-sm text-gray-600 mt-1">Servicio General</p>
+      </div>
+      <div data-cat="Servicio General" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Control Total</h3>
+        <p class="text-sm text-gray-600 mt-1">Servicio General</p>
+      </div>
+      <div data-cat="Servicio General" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Máxima Limpieza</h3>
+        <p class="text-sm text-gray-600 mt-1">Servicio General</p>
+      </div>
+      <div data-cat="Servicio General" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Misión Higiene</h3>
+        <p class="text-sm text-gray-600 mt-1">Servicio General</p>
+      </div>
+      <div data-cat="Servicio General" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Zona Clara</h3>
+        <p class="text-sm text-gray-600 mt-1">Servicio General</p>
+      </div>
+      <div data-cat="Servicio General" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Higiene Smart</h3>
+        <p class="text-sm text-gray-600 mt-1">Servicio General</p>
+      </div>
+      <div data-cat="Servicio General" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Eco Limpio</h3>
+        <p class="text-sm text-gray-600 mt-1">Servicio General</p>
+      </div>
+      <div data-cat="Servicio General" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">LimpiaFácil</h3>
+        <p class="text-sm text-gray-600 mt-1">Servicio General</p>
+      </div>
+      <div data-cat="Servicio General" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Servicio Pulcro</h3>
+        <p class="text-sm text-gray-600 mt-1">Servicio General</p>
+      </div>
+
+
+
+
+      <div data-cat="Elegante" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Brillance</h3>
+        <p class="text-sm text-gray-600 mt-1">Elegante</p>
+      </div>
+      <div data-cat="Elegante" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Pureza Total</h3>
+        <p class="text-sm text-gray-600 mt-1">Elegante</p>
+      </div>
+      <div data-cat="Elegante" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Áurea Limpieza</h3>
+        <p class="text-sm text-gray-600 mt-1">Elegante</p>
+      </div>
+      <div data-cat="Elegante" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Crystal Home</h3>
+        <p class="text-sm text-gray-600 mt-1">Elegante</p>
+      </div>
+      <div data-cat="Elegante" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Clarité</h3>
+        <p class="text-sm text-gray-600 mt-1">Elegante</p>
+      </div>
+      <div data-cat="Elegante" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Imperio Limpio</h3>
+        <p class="text-sm text-gray-600 mt-1">Elegante</p>
+      </div>
+      <div data-cat="Elegante" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Eximia</h3>
+        <p class="text-sm text-gray-600 mt-1">Elegante</p>
+      </div>
+      <div data-cat="Elegante" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Luxe Clean</h3>
+        <p class="text-sm text-gray-600 mt-1">Elegante</p>
+      </div>
+      <div data-cat="Elegante" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Élite Brillante</h3>
+        <p class="text-sm text-gray-600 mt-1">Elegante</p>
+      </div>
+      <div data-cat="Elegante" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Pulcro & Fino</h3>
+        <p class="text-sm text-gray-600 mt-1">Elegante</p>
+      </div>
+      <div data-cat="Elegante" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Limpiarte</h3>
+        <p class="text-sm text-gray-600 mt-1">Elegante</p>
+      </div>
+      <div data-cat="Elegante" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Esencia Clara</h3>
+        <p class="text-sm text-gray-600 mt-1">Elegante</p>
+      </div>
+      <div data-cat="Elegante" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Pulcritud Suprema</h3>
+        <p class="text-sm text-gray-600 mt-1">Elegante</p>
+      </div>
+      <div data-cat="Elegante" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Delizia</h3>
+        <p class="text-sm text-gray-600 mt-1">Elegante</p>
+      </div>
+      <div data-cat="Elegante" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Claros Entornos</h3>
+        <p class="text-sm text-gray-600 mt-1">Elegante</p>
+      </div>
+      <div data-cat="Elegante" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Élite Doméstica</h3>
+        <p class="text-sm text-gray-600 mt-1">Elegante</p>
+      </div>
+      <div data-cat="Elegante" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Limpexia</h3>
+        <p class="text-sm text-gray-600 mt-1">Elegante</p>
+      </div>
+
+
+
+
+
+
+      <div data-cat="Divertido" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Limpiaderos Unidos</h3>
+        <p class="text-sm text-gray-600 mt-1">Divertido</p>
+      </div>
+      <div data-cat="Divertido" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">¡A Barrer!</h3>
+        <p class="text-sm text-gray-600 mt-1">Divertido</p>
+      </div>
+      <div data-cat="Divertido" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">La Escoba Mágica</h3>
+        <p class="text-sm text-gray-600 mt-1">Divertido</p>
+      </div>
+      <div data-cat="Divertido" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">El Trapo Feliz</h3>
+        <p class="text-sm text-gray-600 mt-1">Divertido</p>
+      </div>
+      <div data-cat="Divertido" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Burbujitas</h3>
+        <p class="text-sm text-gray-600 mt-1">Divertido</p>
+      </div>
+      <div data-cat="Divertido" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Trapito Power</h3>
+        <p class="text-sm text-gray-600 mt-1">Divertido</p>
+      </div>
+      <div data-cat="Divertido" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Cero Mugre</h3>
+        <p class="text-sm text-gray-600 mt-1">Divertido</p>
+      </div>
+      <div data-cat="Divertido" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Chao Suciedad</h3>
+        <p class="text-sm text-gray-600 mt-1">Divertido</p>
+      </div>
+      <div data-cat="Divertido" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Full Limpiazo</h3>
+        <p class="text-sm text-gray-600 mt-1">Divertido</p>
+      </div>
+      <div data-cat="Divertido" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Limpia que Limpia</h3>
+        <p class="text-sm text-gray-600 mt-1">Divertido</p>
+      </div>
+      <div data-cat="Divertido" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Las Barrenderas</h3>
+        <p class="text-sm text-gray-600 mt-1">Divertido</p>
+      </div>
+      <div data-cat="Divertido" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">La Liga del Trapo</h3>
+        <p class="text-sm text-gray-600 mt-1">Divertido</p>
+      </div>
+      <div data-cat="Divertido" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Súper Limpios</h3>
+        <p class="text-sm text-gray-600 mt-1">Divertido</p>
+      </div>
+      <div data-cat="Divertido" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Suciedad Cero</h3>
+        <p class="text-sm text-gray-600 mt-1">Divertido</p>
+      </div>
+      <div data-cat="Divertido" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Trapeadores del Amor</h3>
+        <p class="text-sm text-gray-600 mt-1">Divertido</p>
+      </div>
+      <div data-cat="Divertido" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Limpiasaurios</h3>
+        <p class="text-sm text-gray-600 mt-1">Divertido</p>
+      </div>
+      <div data-cat="Divertido" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Abrillantados S.A.</h3>
+        <p class="text-sm text-gray-600 mt-1">Divertido</p>
+      </div>
+      <div data-cat="Divertido" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Escobón Max</h3>
+        <p class="text-sm text-gray-600 mt-1">Divertido</p>
+      </div>
+      <div data-cat="Divertido" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Chispa Limpia</h3>
+        <p class="text-sm text-gray-600 mt-1">Divertido</p>
+      </div>
+      <div data-cat="Divertido" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">La Mopa Rebelde</h3>
+        <p class="text-sm text-gray-600 mt-1">Divertido</p>
+      </div>
+
+
+      <div data-cat="Ingles" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Cleanverse</h3>
+        <p class="text-sm text-gray-600 mt-1">Ingles</p>
+      </div>
+      <div data-cat="Ingles" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">BrightNest</h3>
+        <p class="text-sm text-gray-600 mt-1">Ingles</p>
+      </div>
+      <div data-cat="Ingles" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Spotless Squad
+
+</h3>
+        <p class="text-sm text-gray-600 mt-1">Ingles</p>
+      </div>
+      <div data-cat="Ingles" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Shiny & Co.</h3>
+        <p class="text-sm text-gray-600 mt-1">Ingles</p>
+      </div>
+      <div data-cat="Ingles" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">The Dust Busters</h3>
+        <p class="text-sm text-gray-600 mt-1">Ingles</p>
+      </div>
+      <div data-cat="Ingles" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">ShinePro</h3>
+        <p class="text-sm text-gray-600 mt-1">Ingles</p>
+      </div>
+      <div data-cat="Ingles" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">HappyClean</h3>
+        <p class="text-sm text-gray-600 mt-1">Ingles</p>
+      </div>
+      <div data-cat="Ingles" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Mr. Clean Team</h3>
+        <p class="text-sm text-gray-600 mt-1">Ingles</p>
+      </div>
+      <div data-cat="Ingles" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">SparkJoy</h3>
+        <p class="text-sm text-gray-600 mt-1">Ingles</p>
+      </div>
+      <div data-cat="Ingles" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">ClearItUp</h3>
+        <p class="text-sm text-gray-600 mt-1">Ingles</p>
+      </div>
+      <div data-cat="Ingles" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Neat & Easy</h3>
+        <p class="text-sm text-gray-600 mt-1">Ingles</p>
+      </div>
+      <div data-cat="Ingles" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">GoClean</h3>
+        <p class="text-sm text-gray-600 mt-1">Ingles</p>
+      </div>
+      <div data-cat="Ingles" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Total Shine</h3>
+        <p class="text-sm text-gray-600 mt-1">Ingles</p>
+      </div>
+      <div data-cat="Ingles" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">FreshSpace</h3>
+        <p class="text-sm text-gray-600 mt-1">Ingles</p>
+      </div>
+      <div data-cat="Ingles" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">DustAway</h3>
+        <p class="text-sm text-gray-600 mt-1">Ingles</p>
+      </div>
+      <div data-cat="Ingles" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">House Harmony</h3>
+        <p class="text-sm text-gray-600 mt-1">Ingles</p>
+      </div>
+      <div data-cat="Ingles" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">xZenCleanxx</h3>
+        <p class="text-sm text-gray-600 mt-1">Ingles</p>
+      </div>
+      <div data-cat="Ingles" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">CleanUp Heroes</h3>
+        <p class="text-sm text-gray-600 mt-1">Ingles</p>
+      </div>
+      <div data-cat="Ingles" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Dream & Clean</h3>
+        <p class="text-sm text-gray-600 mt-1">Ingles</p>
+      </div>
+      <div data-cat="Ingles" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Glow & Go</h3>
+        <p class="text-sm text-gray-600 mt-1">Ingles</p>
+      </div> 
+      <div data-cat="Ingles" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">UltraNeat</h3>
+        <p class="text-sm text-gray-600 mt-1">Ingles</p>
+      </div> 
+      <div data-cat="Ingles" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">ClearVibes</h3>
+        <p class="text-sm text-gray-600 mt-1">Ingles</p>
+      </div> 
+      <div data-cat="Ingles" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">The Mop Brosn</h3>
+        <p class="text-sm text-gray-600 mt-1">Ingles</p>
+      </div> 
+      <div data-cat="Ingles" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Soft Touch Cleaning</h3>
+        <p class="text-sm text-gray-600 mt-1">Ingles</p>
+      </div> 
+      <div data-cat="Ingles" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">ShineGenixn</h3>
+        <p class="text-sm text-gray-600 mt-1">Ingles</p>
+      </div> 
+
+    </div>
+  </section>
+
+  <script>
+    function filtrar(categoria) {
+      const tarjetas = document.querySelectorAll('#lista-nombres > div');
+      tarjetas.forEach(tarjeta => {
+        if (tarjeta.dataset.cat === categoria || categoria === '') {
+          tarjeta.classList.remove('hidden');
+        } else {
+          tarjeta.classList.add('hidden');
+        }
+      });
+    }
+  </script>
+</body>
+<footer class="m-8 w-auto  py-4 text-white" style="background-color: #00c4cc;">
+  <div class="container mx-auto text-center">
+    <p>© 2025 INSPIRA NEGOCIOS. Todos los derechos reservados.</p>
+  </div>
+</footer>
+</html>

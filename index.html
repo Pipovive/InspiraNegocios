@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Encuentra los mejores nombres para negocios con Inspira Negocios. Inspírate, evita errores y encuentra el nombre perfecto para tu emprendimiento.">
+  <meta name="keywords" content="nombres para negocios, ideas de nombres, nombre de empresa, emprender, branding">
+  <meta name="author" content="Inspira Negocios">
+  <title>Inspira Negocios - Lista de Nombres</title>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            archivo: ['"Archivo Black"', 'sans-serif']
+          },
+          colors: {
+            principal: '#00B9C7'
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+  .texto-parrafo {
+    @apply texto-parrafo;
+  }
+</style>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 60px 100px;
+      gap: 40px; /* Antes podía ser 100px o más, ahora lo reducimos */
+    }
+    body {
+      font-family: 'Archivo Black', sans-serif;
+      background-color: #ffffff;
+      color: #222;
+      padding-top: 20px;
+      padding-left: 100px;
+      padding-right: 100px;
+      background-image: url('fondo.png');
+      background-size: 700px;
+      background-repeat: repeat;
+      background-position: center;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-bottom: 30px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo img {
+      height: 80px;
+    }
+
+    nav {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: #00B9C7;
+      text-decoration: none;
+      border: 2px solid #00B9C7;
+      padding: 6px 12px;
+      border-radius: 16px;
+      font-size: 14px;
+      font-family: sans-serif;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      background-color: #00B9C7;
+      color: white;
+    }
+
+    .titulo {
+      color: #00B9C7;
+      font-size: 32px;
+      margin: 40px 0 20px;
+    }
+
+    .categoria {
+      margin-top: 40px;
+    }
+
+    .categoria h2 {
+      font-size: 24px;
+      color: #0096a6;
+      margin-bottom: 20px;
+    }
+
+    .nombre-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 16px;
+    }
+
+    .nombre-box {
+      background-color: #e0f7fa;
+      padding: 12px 16px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 185, 199, 0.15);
+      text-align: center;
+      font-family: sans-serif;
+      font-size: 14px;
+    }
+    .nube {
+      animation: flotar 6s ease-in-out infinite;
+      width: 80px;
+      height: auto;
+    }
+    @keyframes flotar {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(50px); }
+      100% { transform: translateY(0px); }
+    }
+  </style>
+</head>
+
+  <body class="m-0 p-z overflow-x-hidden max-w-5xl mx-auto px-4 ">
+    <header class="p-2">
+    <div class="logo">
+     <img src="logo.png" alt="Logo Inspira Negocios">
+      <div>
+        <strong class="text-xl">INSPIRA</strong><br>
+        <span class="font-sans text-sm">NEGOCIOS</span>
+        
+      </div>
+    </div>
+    <nav>
+       <!-- Botón Hamburguesa -->
+        <button id="menu-btn" class="md:hidden text-gray-700 focus:outline-none">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+
+          <ul class="hidden md:flex gap-6 text-gray-700">
+              <li><a href="#">LOS MEJORES NOMBRES PARA MI NEGOCIO</a></li>
+              <li><a href="#">¿QUIÉN HIZO ESTA PÁGINA?</a></li>
+          </ul>
+
+          <!-- Menú móvil -->
+        <div id="mobile-menu" class="hidden md:hidden px-4  ">
+          <ul class="flex flex-col space-y-2 py-2">
+            <li><a href="#"  class="text-principal border-2 border-principal px-3 py-1 rounded-full text-sm font-bold font-sans hover:bg-principal hover:text-white transition" >INICIO</a></li>
+              <li><a href="#"  class="text-principal border-2 border-principal px-3 py-1 rounded-full text-sm font-bold font-sans hover:bg-principal hover:text-white transition" >LOS MEJORES NOMBRES PARA MI NEGOCIO</a></li>
+              <li><a href="#"  class="text-principal border-2 border-principal px-3 py-1 rounded-full text-sm font-bold font-sans hover:bg-principal hover:text-white transition" >¿QUIÉN HIZO ESTA PÁGINA?</a></li>  
+          </ul>
+        </div>
+
+        <script>
+          const menuBtn = document.getElementById('menu-btn');
+          const mobileMenu = document.getElementById('mobile-menu');
+
+          menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+          });
+        </script>
+    </nav>
+  </header>
+  <main>
+    <div class="w-80 h-auto mb-6 mx-auto flex">
+      <img src="Logo1.png" alt="Logo de Inspira Negocios" >
+      <img src="nube.png" alt="Nube decorativa animada png" class="w-80 absolute  opacity-40 nube -z-10">
+    </div>
+      
+    <div class="flex flex-col md:flex-row items-top gap-8 p-8 bg-white rounded-lg shadow-lg mx-auto mb-6">
+      
+      <section class="my-12 max-w-6xl mx-auto px-4">
+  <h2 class="text-3xl font-bold text-principal mb-6 text-center">Explora por categoría</h2>
+  <h1 class="text-3xl font-bold  text-principal mb-6 text-center">Nombres PERFECTOS para tus negocios</h1>
+  <p class="text-base sm:text-lg leading-relaxed text-gray-800 font-sans mb-6">
+        🛠️ El primer paso de un gran negocio es un gran nombre. Si ya tienes uno, no esperes más: empieza a construir tu marca hoy.
+    </p>
+  <div class="grid gap-8 grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
+
+    <!-- Subpágina: Nombres para Cafeterías -->
+    <a href="/nombres-para-cafeterias" class="block rounded-xl overflow-hidden shadow hover:shadow-lg transition">
+      <img src="img/cafeteria.jpg" alt="Nombres para cafeterías" class="w-full h-40 object-cover">
+      <div class="p-4 bg-white">
+        <h3 class="text-xl font-bold text-gray-800 mb-2">Nombres para Cafeterías</h3>
+        <p class="text-gray-600 text-sm">Descubre ideas dulces, modernas y únicas para tu café.</p>
+      </div>
+    </a>
+
+    
+    <!-- Subpágina: Nombres para Cafeterías -->
+    <a href="/nombres-para-cafeterias" class="block rounded-xl overflow-hidden shadow hover:shadow-lg transition">
+      <img src="img/cafeteria.jpg" alt="Nombres para cafeterías" class="w-full h-40 object-cover">
+      <div class="p-4 bg-white">
+        <h3 class="text-xl font-bold text-gray-800 mb-2">Nombres para Cafeterías</h3>
+        <p class="text-gray-600 text-sm">Descubre ideas dulces, modernas y únicas para tu café.</p>
+      </div>
+    </a>
+
+    <!-- Subpágina: Nombres Elegantes -->
+    <a href="/nombres-elegantes" class="block rounded-xl overflow-hidden shadow hover:shadow-lg transition">
+      <img src="img/elegante.jpg" alt="Nombres elegantes para negocios" class="w-full h-40 object-cover">
+      <div class="p-4 bg-white">
+        <h3 class="text-xl font-bold text-gray-800 mb-2">Nombres Elegantes</h3>
+        <p class="text-gray-600 text-sm">Inspírate con nombres sofisticados y memorables.</p>
+      </div>
+    </a>
+
+    <!-- Subpágina: Nombres Divertidos -->
+    <a href="/nombres-divertidos" class="block rounded-xl overflow-hidden shadow hover:shadow-lg transition">
+      <img src="img/divertido.jpg" alt="Nombres divertidos y creativos" class="w-full h-40 object-cover">
+      <div class="p-4 bg-white">
+        <h3 class="text-xl font-bold text-gray-800 mb-2">Nombres Divertidos</h3>
+        <p class="text-gray-600 text-sm">Haz que tu marca destaque con un nombre lleno de personalidad.</p>
+      </div>
+    </a>
+
+  </div>
+</section>
+        
+        
+  
+</body>
+<!-- <footer class="m-8 w-auto p-4 text-white" style="background-color: #00c4cc;">
+  <div class="container mx-auto text-center">
+    <p>© 2025 INSPIRA NEGOCIOS. Todos los derechos reservados.</p>
+  </div>
+</footer> -->
+</html>
+
