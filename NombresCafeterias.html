@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inspira Negocios - Nombres Divertidoss</title>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            archivo: ['"Archivo Black"', 'sans-serif']
+          },
+          colors: {
+            principal: '#00B9C7'
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    html {
+    scroll-behavior: smooth;
+    }
+    body {
+      background-image: url('assets/images/Comunes/fondocafe.png');
+      background-repeat: repeat;
+      background-size: 700px;
+      background-attachment: fixed;
+      background-color: #f5f5f5;
+    }
+    .nube {
+      animation: flotar 6s ease-in-out infinite;
+    }
+    @keyframes flotar {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(50px); }
+      100% { transform: translateY(0px); }
+    }
+  </style>
+</head>
+<body class="font-archivo text-[#222] bg-white px-10 sm:px-24 pt-6">
+  <header class="flex justify-between items-center flex-wrap mb-6">
+
+    <div class="flex items-center gap-4">
+      <img src="assets\images\Comunes\logo.png" alt="Logo Inspira Negocios" class="h-20">
+      <div>
+        <!-- <strong class="text-xl">INSPIRA</strong><br>
+        <span class="font-sans text-sm">NEGOCIOS</span> -->
+      </div>
+    </div>
+
+    <nav>
+       <!-- Botón Hamburguesa -->
+        <button id="menu-btn" class="md:hidden text-gray-700 focus:outline-none">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+
+          <ul class="hidden md:flex gap-6 text-gray-700">
+              <li><a href="#"  class="text-principal border-2 border-principal px-3 py-1 rounded-full text-sm font-bold font-sans hover:bg-principal hover:text-white transition" >INICIO</a></li>
+              <li><a href="index.html"  class="text-principal border-2 border-principal px-3 py-1 rounded-full text-sm font-bold font-sans hover:bg-principal hover:text-white transition" >LOS MEJORES NOMBRES PARA MI NEGOCIO</a></li>
+              <li><a href="#"  class="text-principal border-2 border-principal px-3 py-1 rounded-full text-sm font-bold font-sans hover:bg-principal hover:text-white transition" >¿QUIÉN HIZO ESTA PÁGINA?</a></li>  
+          </ul>
+
+          <!-- Menú móvil -->
+        <div id="mobile-menu" class="hidden md:hidden px-4  ">
+          <ul class="flex flex-col space-y-2 py-2">
+            <li><a href="#"  class="text-principal border-2 border-principal px-3 py-1 rounded-full text-sm font-bold font-sans hover:bg-principal hover:text-white transition" >INICIO</a></li>
+              <li><a href="#"  class="text-principal border-2 border-principal px-3 py-1 rounded-full text-sm font-bold font-sans hover:bg-principal hover:text-white transition" >LOS MEJORES NOMBRES PARA MI NEGOCIO</a></li>
+              <li><a href="#"  class="text-principal border-2 border-principal px-3 py-1 rounded-full text-sm font-bold font-sans hover:bg-principal hover:text-white transition" >¿QUIÉN HIZO ESTA PÁGINA?</a></li>  
+          </ul>
+        </div>
+
+        <script>
+          const menuBtn = document.getElementById('menu-btn');
+          const mobileMenu = document.getElementById('mobile-menu');
+
+          menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+          });
+        </script>
+    </nav>
+
+    <!-- <nav class="flex gap-2 flex-wrap mt-2 sm:gap-3 sm:mt-4 text-sm sm:text-base">
+      <a href="#" class="text-principal border-2 border-principal px-3 py-1 rounded-full text-sm font-bold font-sans hover:bg-principal hover:text-white transition">INICIO</a>
+      <a href="#" class="text-principal border-2 border-principal px-3 py-1 rounded-full text-sm font-bold font-sans hover:bg-principal hover:text-white transition">MAS TENDENCIA DE NOMBRES EN 2025</a>
+      <a href="#" class="text-principal border-2 border-principal px-3 py-1 rounded-full text-sm font-bold font-sans hover:bg-principal hover:text-white transition">¿QUIÉN HIZO ESTA PÁGINA?</a>
+    </nav> -->
+    
+  </header>
+
+  <main class="flex flex-wrap justify-between items-start gap-10 mt-10">
+    <div class="max-w-xl pr-6">
+      <h1 class="text-principal text-5xl sm:text-5x1 font-bold leading-tight mb-4">☕ 100 NOMBRES GRATIS PARA TU CAFETERÍA</h1>
+      <p class="text-base sm:text-lg leading-relaxed text-gray-800 font-sans mb-6">
+       ¿Estás por abrir tu propia cafetería? Te ayudamos con 100 nombres únicos, memorables y listos para usar.¡Haz que tu café destaque desde el primer sorbo!</p>
+      <a href="#nombres" class="inline-block border-4 border-principal text-principal font-bold uppercase text-xl px-8 py-3 rounded-full shadow-lg hover:bg-principal hover:text-white transition duration-500">MÍRALOS AQUÍ</a>
+</div>
+    <div class="relative max-w-md">
+      <img src="assets/images/Comunes/nubecafe.png" alt="nube decorativa color cafe" class="absolute -top-20 -left-20 w-[120%] opacity-40 nube">
+      <img src="assets\images\Cafeteria/ilustracionsinfondo.png" alt="vector animado de personas haciendo cafe negocio png" class="relative z-10 w-full h-auto">
+    </div>
+  </main>
+
+  <div class="p-2 flex flex-col items-left mt-24 w-full" >
+      <h2 class="pt-6 sm:text-4xl text-principal font-bold mb-6">ELLOS YA DIERON EL PRIMER PASO, ¿Y TÚ?</h2>
+      <p class="text-base sm:text-lg leading-relaxed text-gray-800 font-sans mb-6">
+       Mira estas increíbles marcas de limpieza que ya están en marcha.Te regalamos 100 nombres únicos y listos para usar para que tú también empieces con fuerza. 🌟 ¡Inspírate, elige tu nombre y haz que tu negocio brille desde el primer día!</p>
+      <div class="relative w-full max-w-xl mx-auto overflow-hidden rounded-lg">
+
+        <div class="flex transition-transform duration-500 ease-in-out" id="carousel-images">
+          <img src="assets\images\Cafeteria/imagen1.jpg" alt = "Ilustración estilo plano de una cafetería con barista y clienta en tonos marrones" class="w-full shrink-0" />
+          <img src="assets\images\Cafeteria/imagen2.jpg" alt = "Ilustración estilo plano de una cafetería con barista y clienta en tonos marrones" class="w-full shrink-0" />
+          <img src="assets\images\Cafeteria/imagen3.jpg" alt = "Ilustración estilo plano de una cafetería con barista y clienta en tonos marrones" class="w-full shrink-0" />
+          <img src="assets\images\Cafeteria/imagen4.jpg" alt = "Diseño vectorial minimalista de una cafetería moderna y acogedora." class="w-full shrink-0" />
+          <img src="assets\images\Cafeteria/imagen5.jpg" alt = "Diseño vectorial minimalista de una cafetería moderna y acogedora." class="w-full shrink-0" />
+          <img src="assets\images\Cafeteria/imagen6.jpg" alt = "Gráfico plano de interior de café con tonos cálidos y estilo contemporáneo." class="w-full shrink-0" />
+          <img src="assets\images\Cafeteria/imagen7.jpg" alt = "Cafetería ilustrada con máquina de espresso, plantas y clientes." class="w-full shrink-0" />
+        </div>
+
+      <!-- Botones -->
+        <button onclick="prevSlide()" class="absolute top-1/2 left-2 -translate-y-1/2 bg-black/50 text-white p-2 rounded-full">
+          ‹
+        </button>
+        <button onclick="nextSlide()" class="absolute top-1/2 right-2 -translate-y-1/2 bg-black/50 text-white p-2 rounded-full">
+          ›
+        </button>
+  </div>
+</div>
+<script>
+  const images = document.getElementById("carousel-images");
+  const totalSlides = images.children.length;
+  let index = 0;
+
+  function showSlide(i) {
+    index = (i + totalSlides) % totalSlides;
+    images.style.transform = `translateX(-${index * 100}%)`;
+  }
+
+  function nextSlide() {
+    showSlide(index + 1);
+  }
+
+  function prevSlide() {
+    showSlide(index - 1);
+  }
+</script>
+
+<div class="flex justify-center items-center gap-4 p-8 ">
+    <button onclick="generarNombre()" class="inline-block border-4 border-principal text-principal font-bold uppercase text-xl px-8 py-3 rounded-full shadow-lg hover:bg-principal hover:text-white transition duration-500">Generar nombre I.A</button>
+    <p id="resultado" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal"></p>
+</div>
+
+<script>
+  const nombres = [
+    "Café Central", "Aroma de Café", "La Taza Dorada", "El Buen Café", "Café del Pueblo", "Café Colonial", "Café & Compañía", "La Esquina del Café", "Café Matinal", "Tostado Natural", "Café del Parque", "La Casa del Espresso", "Café y Pan", "Café de Siempre", "Abierto Café", "Café Nostalgia", "Café Familiar", "El Rincón del Sabor", "Café Moka", "Café de la Abuela", "Nómada Café", "Kafé Studio", "Grano & Diseño", "Cero Azúcar", "Urban Roast", "El Grano Moderno", "Taza Nómada", "Café Raw", "Minimal Brew", "Loop Café", "Punto Café", "Grano 360", "Neutro Café", "Café Lineal", "Caffé Uno", "ORÍGEN", "Grano Vivo", "BrewLab", "Café Cuadro", "Método Café", "El Café del Lobo", "Café & Libros", "La Cafetera Mágica", "El Café del Astronauta", "Café Vintage", "Café 8 Bits", "Café del Bosque", "Café de las Estrellas", "El Gato Cafetero", "Café Medieval", "Café de Película", "Steam Brew", "Café Pirata", "Café Sakura", "El Café del Viajero", "Café Indie", "La Taza Encantada", "Café Retro", "El Café del Arte", "Café Misterioso", "Café Serena", "Grano Fino", "Tostado & Aroma", "Café Doré", "Maison du Café", "Café Nocturne", "Alma de Grano", "Café de Autor", "Elixir Café", "Bruma Café", "Café Leve", "Le Grano", "Flor de Café", "Café & Seda", "Cosecha Privada", "Marea Café", "Aura Café", "Sublime Brew", "Café 1923", "Café Estilo", "Cafecito Rico", "¡Qué Café!", "Café con Chisme", "El Cafecín", "Café del Amor", "Café Lento", "Dame Café", "Café con Pan", "Café Meme", "Caffeineando", "Café WOW", "Chispa Café", "El Café Rebelde", "Café y Nada Más", "Despiértame Café", "Milky Brew", "Café de Risa", "Café con Gato", "Burbujitas Café", "Caffeine Crush"
+
+  ];
+
+  function generarNombre() {
+    const aleatorio = nombres[Math.floor(Math.random() * nombres.length)];
+    document.getElementById("resultado").innerText = aleatorio;
+  }
+</script>
+
+
+  <section id="nombres" class="mt-24">
+    <h2 class="pt-4 text-3xl sm:text-4xl text-principal font-bold mb-6">Explora por categoría</h2>
+
+    <div class="flex flex-wrap gap-3 mb-10">
+      <button onclick="filtrar('Clásicos')" class="px-4 py-2 border-2 border-principal text-principal rounded-full hover:bg-principal hover:text-white transition">Clásicos</button>
+      <button onclick="filtrar('Modernos')" class="px-4 py-2 border-2 border-principal text-principal rounded-full hover:bg-principal hover:text-white transition">Modernos</button>
+      <button onclick="filtrar('Temáticos')" class="px-4 py-2 border-2 border-principal text-principal rounded-full hover:bg-principal hover:text-white transition">Temáticos</button>
+      <button onclick="filtrar('Elegantes')" class="px-4 py-2 border-2 border-principal text-principal rounded-full hover:bg-principal hover:text-white transition">Elegantes</button>
+      <button onclick="filtrar('Divertidos')" class="px-4 py-2 border-2 border-principal text-principal rounded-full hover:bg-principal hover:text-white transition">Divertidos</button>
+    </div>
+
+    <div id="lista-nombres" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div data-cat="Clásicos" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Café Central</h3>
+        <p class="text-sm text-gray-600 mt-1">Clásicos</p>
+      </div>
+      <div data-cat="Clásicos" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Aroma de Café</h3>
+        <p class="text-sm text-gray-600 mt-1">Clásicos</p>
+      </div>
+      <div data-cat="Clásicos" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">La Taza Dorada</h3>
+        <p class="text-sm text-gray-600 mt-1">Clásicos</p>
+      </div>
+      <div data-cat="Clásicos" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Café del Pueblo</h3>
+        <p class="text-sm text-gray-600 mt-1">Clásicos</p>
+      </div>
+      <div data-cat="Clásicos" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Café Colonial</h3>
+        <p class="text-sm text-gray-600 mt-1">Clásicos</p>
+      </div>
+      <div data-cat="Clásicos" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Café & Compañía</h3>
+        <p class="text-sm text-gray-600 mt-1">Clásicos</p>
+      </div>
+      <div data-cat="Clásicos" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Tostado Natural</h3>
+        <p class="text-sm text-gray-600 mt-1">Clásicos</p>
+      </div>
+      <div data-cat="Clásicos" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Café del Parque</h3>
+        <p class="text-sm text-gray-600 mt-1">Clásicos</p>
+      </div>
+      <div data-cat="Clásicos" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">La Casa del Espresso</h3>
+        <p class="text-sm text-gray-600 mt-1">Clásicos</p>
+      </div>
+      <div data-cat="Clásicos" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Café y Pan</h3>
+        <p class="text-sm text-gray-600 mt-1">Clásicos</p>
+      </div>
+      <div data-cat="Clásicos" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Café de Siempre</h3>
+        <p class="text-sm text-gray-600 mt-1">Clásicos</p>
+      </div>
+      <div data-cat="Clásicos" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Abierto Café</h3>
+        <p class="text-sm text-gray-600 mt-1">Clásicos</p>
+      </div>
+      <div data-cat="Clásicos" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Café Nostalgia</h3>
+        <p class="text-sm text-gray-600 mt-1">Clásicos</p>
+      </div>
+      <div data-cat="Clásicos" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Café Familiar</h3>
+        <p class="text-sm text-gray-600 mt-1">Clásicos</p>
+      </div>
+      <div data-cat="Clásicos" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">El Rincón del Sabor</h3>
+        <p class="text-sm text-gray-600 mt-1">Clásicos</p>
+      </div>
+      <div data-cat="Clásicos" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Armonía Doméstica</h3>
+        <p class="text-sm text-gray-600 mt-1">Clásicos</p>
+      </div>
+      <div data-cat="Clásicos" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Café Moka</h3>
+        <p class="text-sm text-gray-600 mt-1">Clásicos</p>
+      </div>
+      <div data-cat="Clásicos" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Café de la Abuela</h3>
+        <p class="text-sm text-gray-600 mt-1">Clásicos</p>
+      </div>
+
+
+
+
+
+    
+      <div data-cat="Modernos" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Nómada Café</h3>
+        <p class="text-sm text-gray-600 mt-1">Modernos</p>
+      </div>
+      <div data-cat="Modernos" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Kafé Studio</h3>
+        <p class="text-sm text-gray-600 mt-1">Modernos</p>
+      </div>
+      <div data-cat="Modernos" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Grano & Diseño</h3>
+        <p class="text-sm text-gray-600 mt-1">Modernos</p>
+      </div>
+      <div data-cat="Modernos" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Cero Azúcar</h3>
+        <p class="text-sm text-gray-600 mt-1">Modernos</p>
+      </div>
+      <div data-cat="Modernos" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Urban Roast</h3>
+        <p class="text-sm text-gray-600 mt-1">Modernos</p>
+      </div>
+      <div data-cat="Modernos" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">El Grano Moderno</h3>
+        <p class="text-sm text-gray-600 mt-1">Modernos</p>
+      </div>
+      <div data-cat="Modernos" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Taza Nómada</h3>
+        <p class="text-sm text-gray-600 mt-1">Modernos</p>
+      </div>
+      <div data-cat="Modernos" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Café Raw</h3>
+        <p class="text-sm text-gray-600 mt-1">Modernos</p>
+      </div>
+      <div data-cat="Modernos" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Minimal Brew</h3>
+        <p class="text-sm text-gray-600 mt-1">Modernos</p>
+      </div>
+      <div data-cat="Modernos" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Neutro Café</h3>
+        <p class="text-sm text-gray-600 mt-1">Modernos</p>
+      </div>
+      <div data-cat="Modernos" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Café Lineal</h3>
+        <p class="text-sm text-gray-600 mt-1">Modernos</p>
+      </div>
+      <div data-cat="Modernos" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Caffé Uno</h3>
+        <p class="text-sm text-gray-600 mt-1">Modernos</p>
+      </div>
+      <div data-cat="Modernos" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">ORÍGEN</h3>
+        <p class="text-sm text-gray-600 mt-1">Modernos</p>
+      </div>
+      <div data-cat="Modernos" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Café Cuadro</h3>
+        <p class="text-sm text-gray-600 mt-1">Modernos</p>
+      </div>
+      <div data-cat="Modernos" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Método Café</h3>
+        <p class="text-sm text-gray-600 mt-1">Modernos</p>
+      </div>
+      
+     
+
+      <div data-cat="Temáticos" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">El Café del Lobo</h3>
+        <p class="text-sm text-gray-600 mt-1">Temáticos</p>
+      </div>
+      <div data-cat="Temáticos" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Café & Libros</h3>
+        <p class="text-sm text-gray-600 mt-1">Temáticos</p>
+      </div>
+      <div data-cat="Temáticos" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">La Cafetera Mágica</h3>
+        <p class="text-sm text-gray-600 mt-1">Temáticos</p>
+      </div>
+      <div data-cat="Temáticos" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Café Vintage</h3>
+        <p class="text-sm text-gray-600 mt-1">Temáticos</p>
+      </div>
+      <div data-cat="Temáticos" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Café 8 Bits</h3>
+        <p class="text-sm text-gray-600 mt-1">Temáticos</p>
+      </div>
+      <div data-cat="Temáticos" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Café del Bosque</h3>
+        <p class="text-sm text-gray-600 mt-1">Temáticos</p>
+      </div>
+      <div data-cat="Temáticos" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Café de las Estrellas</h3>
+        <p class="text-sm text-gray-600 mt-1">Temáticos</p>
+      </div>
+      <div data-cat="Temáticos" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">El Gato Cafetero</h3>
+        <p class="text-sm text-gray-600 mt-1">Temáticos</p>
+      </div>
+      <div data-cat="Temáticos" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Café Medieval</h3>
+        <p class="text-sm text-gray-600 mt-1">Temáticos</p>
+      </div>
+      <div data-cat="Temáticos" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Café de Película</h3>
+        <p class="text-sm text-gray-600 mt-1">Temáticos</p>
+      </div>
+      <div data-cat="Temáticos" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Café Pirata</h3>
+        <p class="text-sm text-gray-600 mt-1">Temáticos</p>
+      </div>
+      <div data-cat="Temáticos" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Café Sakura</h3>
+        <p class="text-sm text-gray-600 mt-1">Temáticos</p>
+      </div>
+      <div data-cat="Temáticos" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Café Indie</h3>
+        <p class="text-sm text-gray-600 mt-1">Temáticos</p>
+      </div>
+      <div data-cat="Temáticos" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">La Taza Encantada</h3>
+        <p class="text-sm text-gray-600 mt-1">Temáticos</p>
+      </div>
+      <div data-cat="Temáticos" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">El Café del Arte</h3>
+        <p class="text-sm text-gray-600 mt-1">Temáticos</p>
+      </div>
+      <div data-cat="Temáticos" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Café Retro</h3>
+        <p class="text-sm text-gray-600 mt-1">Temáticos</p>
+      </div>
+      <div data-cat="Temáticos" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Café Misterioso</h3>
+        <p class="text-sm text-gray-600 mt-1">Temáticos</p>
+      </div>
+
+
+
+
+
+
+      <div data-cat="Elegantes" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Café Serena</h3>
+        <p class="text-sm text-gray-600 mt-1">Elegantes</p>
+      </div>
+      <div data-cat="Elegantes" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Grano Fino</h3>
+        <p class="text-sm text-gray-600 mt-1">Elegantes</p>
+      </div>
+      <div data-cat="Elegantes" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Tostado & Aroma</h3>
+        <p class="text-sm text-gray-600 mt-1">Elegantes</p>
+      </div>
+      <div data-cat="Elegantes" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Alma de Grano</h3>
+        <p class="text-sm text-gray-600 mt-1">Elegantes</p>
+      </div>
+      <div data-cat="Elegantes" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Café de Autor</h3>
+        <p class="text-sm text-gray-600 mt-1">Elegantes</p>
+      </div>
+      <div data-cat="Elegantes" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Elixir Café</h3>
+        <p class="text-sm text-gray-600 mt-1">Elegantes</p>
+      </div>
+      <div data-cat="Elegantes" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Bruma Café</h3>
+        <p class="text-sm text-gray-600 mt-1">Elegantes</p>
+      </div>
+      <div data-cat="Elegantes" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Café Leve</h3>
+        <p class="text-sm text-gray-600 mt-1">Elegantes</p>
+      </div>
+      <div data-cat="Elegantes" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Le Grano</h3>
+        <p class="text-sm text-gray-600 mt-1">Elegantes</p>
+      </div>
+      <div data-cat="Elegantes" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Café & Seda</h3>
+        <p class="text-sm text-gray-600 mt-1">Elegantes</p>
+      </div>
+      <div data-cat="Elegantes" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Cosecha Privada</h3>
+        <p class="text-sm text-gray-600 mt-1">Elegantes</p>
+      </div>
+      <div data-cat="Elegantes" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Aura Café</h3>
+        <p class="text-sm text-gray-600 mt-1">Elegantes</p>
+      </div>
+      <div data-cat="Elegantes" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Sublime Brew</h3>
+        <p class="text-sm text-gray-600 mt-1">Elegantes</p>
+      </div>
+      <div data-cat="Elegantes" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Café 1923</h3>
+        <p class="text-sm text-gray-600 mt-1">Elegantes</p>
+      </div>
+      <div data-cat="Elegantes" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Café Estilo</h3>
+        <p class="text-sm text-gray-600 mt-1">Elegantes</p>
+      </div>
+      
+
+
+      <div data-cat="Divertidos" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Cleanverse</h3>
+        <p class="text-sm text-gray-600 mt-1">Divertidos</p>
+      </div>
+      <div data-cat="Divertidos" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">BrightNest</h3>
+        <p class="text-sm text-gray-600 mt-1">Divertidos</p>
+      </div>
+      <div data-cat="Divertidos" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Spotless Squad
+
+</h3>
+        <p class="text-sm text-gray-600 mt-1">Divertidos</p>
+      </div>
+      <div data-cat="Divertidos" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Cafecito Rico</h3>
+        <p class="text-sm text-gray-600 mt-1">Divertidos</p>
+      </div>
+      <div data-cat="Divertidos" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">¡Qué Café!</h3>
+        <p class="text-sm text-gray-600 mt-1">Divertidos</p>
+      </div>
+      <div data-cat="Divertidos" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Café con Chisme</h3>
+        <p class="text-sm text-gray-600 mt-1">Divertidos</p>
+      </div>
+      <div data-cat="Divertidos" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">El Cafecín</h3>
+        <p class="text-sm text-gray-600 mt-1">Divertidos</p>
+      </div>
+      <div data-cat="Divertidos" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Café del Amor</h3>
+        <p class="text-sm text-gray-600 mt-1">Divertidos</p>
+      </div>
+      <div data-cat="Divertidos" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Café Lento</h3>
+        <p class="text-sm text-gray-600 mt-1">Divertidos</p>
+      </div>
+      <div data-cat="Divertidos" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Dame Café</h3>
+        <p class="text-sm text-gray-600 mt-1">Divertidos</p>
+      </div>
+      <div data-cat="Divertidos" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Café con Pan</h3>
+        <p class="text-sm text-gray-600 mt-1">Divertidos</p>
+      </div>
+      <div data-cat="Divertidos" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Café Meme</h3>
+        <p class="text-sm text-gray-600 mt-1">Divertidos</p>
+      </div>
+      <div data-cat="Divertidos" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Caffeineando</h3>
+        <p class="text-sm text-gray-600 mt-1">Divertidos</p>
+      </div>
+      <div data-cat="Divertidos" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Café WOW</h3>
+        <p class="text-sm text-gray-600 mt-1">Divertidos</p>
+      </div>
+      <div data-cat="Divertidos" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Chispa Café</h3>
+        <p class="text-sm text-gray-600 mt-1">Divertidos</p>
+      </div>
+      <div data-cat="Divertidos" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">El Café Rebelde</h3>
+        <p class="text-sm text-gray-600 mt-1">Divertidos</p>
+      </div>
+      <div data-cat="Divertidos" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Café y Nada Más</h3>
+        <p class="text-sm text-gray-600 mt-1">Divertidos</p>
+      </div>
+      <div data-cat="Divertidos" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Despiértame Café</h3>
+        <p class="text-sm text-gray-600 mt-1">Divertidos</p>
+      </div>
+      <div data-cat="Divertidos" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Milky Brew</h3>
+        <p class="text-sm text-gray-600 mt-1">Divertidos</p>
+      </div>
+      <div data-cat="Divertidos" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Café de Risa</h3>
+        <p class="text-sm text-gray-600 mt-1">Divertidos</p>
+      </div> 
+      <div data-cat="Divertidos" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Café con Gato</h3>
+        <p class="text-sm text-gray-600 mt-1">Divertidos</p>
+      </div> 
+      <div data-cat="Divertidos" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Burbujitas Café</h3>
+        <p class="text-sm text-gray-600 mt-1">Divertidos</p>
+      </div> 
+      <div data-cat="Divertidos" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Caffeine Crush</h3>
+        <p class="text-sm text-gray-600 mt-1">Divertidos</p>
+      </div> 
+
+        <div data-cat="Divertidos" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+            <h3 class="text-lg font-bold text-principal">Café con Estilo</h3>
+            <p class="text-sm text-gray-600 mt-1">Divertidos</p>
+
+    </div>
+  </section>
+
+  <script>
+    function filtrar(categoria) {
+      const tarjetas = document.querySelectorAll('#lista-nombres > div');
+      tarjetas.forEach(tarjeta => {
+        if (tarjeta.dataset.cat === categoria || categoria === '') {
+          tarjeta.classList.remove('hidden');
+        } else {
+          tarjeta.classList.add('hidden');
+        }
+      });
+    }
+  </script>
+</body>
+<footer class="m-8 w-auto  py-4 text-white" style="background-color: #00c4cc;">
+  <div class="container mx-auto text-center">
+    <p>© 2025 INSPIRA NEGOCIOS. Todos los derechos reservados.</p>
+  </div>
+</footer>
+</html>
