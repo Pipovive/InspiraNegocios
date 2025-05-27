@@ -1,69 +1,648 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>Nombres de Comida</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #fff8e1;
-            color: #4e342e;
-            margin: 0;
-            padding: 0;
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inspira Negocios - Nombres Enfocados en Arepas, Empanadas y PicadasSs</title>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            archivo: ['"Archivo Black"', 'sans-serif']
+          },
+          colors: {
+            principal: '#00B9C7'
+          }
         }
-        header {
-            background-color: #ff7043;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-        main {
-            padding: 30px;
-        }
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        li {
-            background: #ffe0b2;
-            margin: 10px 0;
-            padding: 15px;
-            border-radius: 8px;
-            font-size: 1.2em;
-        }
-        footer {
-            background-color: #ff7043;
-            color: white;
-            text-align: center;
-            padding: 10px;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
-        }
-    </style>
+      }
+    }
+  </script>
+  <style>
+    html {
+    scroll-behavior: smooth;
+    }
+    body {
+      background-image: url('assets/images/Comunes/fondo.png');
+      background-repeat: repeat;
+      background-size: 700px;
+      background-attachment: fixed;
+      background-color: #f5f5f5;
+    }
+    .nube {
+      animation: flotar 6s ease-in-out infinite;
+    }
+    @keyframes flotar {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(50px); }
+      100% { transform: translateY(0px); }
+    }
+    @keyframes fade-in {
+      from {
+        opacity: 0;
+        transform: translateY(-10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .animate-fade-in {
+      animation: fade-in 0.4s ease-in-out;
+    }
+  </style>
 </head>
-<body>
-    <header>
-        <h1>Nombres de Comida</h1>
-        <p>Una lista deliciosa de nombres relacionados con la comida</p>
-    </header>
-    <main>
-        <h2>Platos Populares</h2>
-        <ul>
-            <li>Pizza Margarita</li>
-            <li>Paella Valenciana</li>
-            <li>Tacos al Pastor</li>
-            <li>Sushi de Salmón</li>
-            <li>Hamburguesa Clásica</li>
-            <li>Ensalada César</li>
-            <li>Spaghetti Carbonara</li>
-            <li>Empanadas de Pollo</li>
-            <li>Arepas Venezolanas</li>
-            <li>Ramen Japonés</li>
-        </ul>
-    </main>
-    <footer>
-        &copy; 2024 Nombres de Comida
-    </footer>
+<body class="font-archivo text-[#222] bg-white px-10 sm:px-24 pt-6">
+  <header class="flex justify-between items-center flex-wrap mb-6">
+
+    <div class="flex items-center gap-4">
+      <img src="assets\images\Comunes\logo.png" alt="Logo Inspira Negocios" class="h-20">
+      <div>
+        <!-- <strong class="text-xl">INSPIRA</strong><br>
+        <span class="font-sans text-sm">NEGOCIOS</span> -->
+      </div>
+    </div>
+
+    <nav>
+       <!-- Botón Hamburguesa -->
+        <button id="menu-btn" class="md:hidden text-gray-700 focus:outline-none">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+
+          <ul class="hidden md:flex gap-6 text-gray-700">
+              <li><a href="Inicio.html"  class="text-principal border-2 border-principal px-3 py-1 rounded-full text-sm font-bold font-sans hover:bg-principal hover:text-white transition" >INICIO</a></li>
+              <li><a href="index.html"  class="text-principal border-2 border-principal px-3 py-1 rounded-full text-sm font-bold font-sans hover:bg-principal hover:text-white transition" >LOS MEJORES NOMBRES PARA MI NEGOCIO</a></li>
+              <li><a href="#"  class="text-principal border-2 border-principal px-3 py-1 rounded-full text-sm font-bold font-sans hover:bg-principal hover:text-white transition" >¿QUIÉN HIZO ESTA PÁGINA?</a></li>  
+          </ul>
+
+          <!-- Menú móvil -->
+        <div id="mobile-menu" class="hidden md:hidden px-4  ">
+          <ul class="flex flex-col items-center gap-2 w-full px-4 animate-fade-in">
+            <li>
+              <a href="quienessomos.html"
+                class="w-full max-w-xs text-principal border border-principal px-3 py-1.5 rounded-full text-sm font-semibold font-sans hover:bg-principal hover:text-white transition-all duration-300 ease-in-out text-center block">
+                GUÍA PARA NOMBRAR A TU NEGOCIO
+              </a>
+            </li>
+            <li>
+              <a href="index.html"
+                class="w-full max-w-xs text-principal border border-principal px-3 py-1.5 rounded-full text-sm font-semibold font-sans hover:bg-principal hover:text-white transition-all duration-300 ease-in-out text-center block">
+                LOS MEJORES NOMBRES PARA MI NEGOCIO
+              </a>
+            </li>
+            <li>
+              <a href="#"
+                class="w-full max-w-xs text-principal border border-principal px-3 py-1.5 rounded-full text-sm font-semibold font-sans hover:bg-principal hover:text-white transition-all duration-300 ease-in-out text-center block">
+                ¿QUIÉN HIZO ESTA PÁGINA?
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <script>
+          const menuBtn = document.getElementById('menu-btn');
+          const mobileMenu = document.getElementById('mobile-menu');
+
+          menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+          });
+        </script>
+    </nav>
+
+    <!-- <nav class="flex gap-2 flex-wrap mt-2 sm:gap-3 sm:mt-4 text-sm sm:text-base">
+      <a href="#" class="text-principal border-2 border-principal px-3 py-1 rounded-full text-sm font-bold font-sans hover:bg-principal hover:text-white transition">INICIO</a>
+      <a href="#" class="text-principal border-2 border-principal px-3 py-1 rounded-full text-sm font-bold font-sans hover:bg-principal hover:text-white transition">MAS TENDENCIA DE NOMBRES EN 2025</a>
+      <a href="#" class="text-principal border-2 border-principal px-3 py-1 rounded-full text-sm font-bold font-sans hover:bg-principal hover:text-white transition">¿QUIÉN HIZO ESTA PÁGINA?</a>
+    </nav> -->
+    
+  </header>
+
+  <main class="flex flex-wrap justify-between items-start gap-10 mt-10">
+    <div class="max-w-xl pr-6">
+      <h1 class="text-principal text-5xl sm:text-5x1 font-bold leading-tight mb-4">100 NOMBRES GRATIS PARA TU NEGOCIO DE COMIDA COLOMBIANA</h1>
+      <p class="text-base sm:text-lg leading-relaxed text-gray-800 font-sans mb-6">
+       Te regalamos 100 nombres únicos y listos para usar para que tú también empieces con sabor y fuerza. 🇨🇴✨
+        Inspírate, elige tu nombre y haz que tu emprendimiento conquiste paladares desde el primer día.
+        </p>
+      <a href="#nombres" class="inline-block border-4 border-principal text-principal font-bold uppercase text-xl px-8 py-3 rounded-full shadow-lg hover:bg-principal hover:text-white transition duration-500">MÍRALOS AQUÍ</a>
+</div>
+    <div class="relative max-w-md">
+      <img src="assets/images/Comunes/nube.png" alt="nube decorativa" class="absolute -top-20 -left-20 w-[120%] opacity-40 nube">
+      <img src="assets\images\ComidaColombiana/ilustracion.png" alt="Ilustración estilo plano de un puesto de comida colombiana con una mujer sirviendo platos típicos como arepas y empanadas, y un cliente realizando el pago, todo en tonos turquesa" class="relative z-10 w-full h-auto">
+    </div>
+  </main>
+
+  <div class="p-2 flex flex-col items-left mt-24 w-full" >
+      <h2 class="pt-6 sm:text-4xl text-principal font-bold mb-6">ELLOS YA DIERON EL PRIMER PASO, ¿Y TÚ?</h2>
+      <p class="text-base sm:text-lg leading-relaxed text-gray-800 font-sans mb-6">
+       ¿Estás por lanzar tu restaurante o puesto de comida colombiana? Te ayudamos con 100 nombres creativos, memorables y llenos de sabor colombiano. ¡Haz que tu marca se destaque desde el primer plato! 🥘🌟
+        <div class="relative w-full max-w-xl mx-auto overflow-hidden rounded-lg">
+
+        <div class="flex transition-transform duration-500 ease-in-out" id="carousel-images">
+          <img src="assets\images\ComidaColombiana/imagen1.jpg" alt="Fachada de restaurante colombiano con decoración rústica y mesas al aire libre" class="w-full shrink-0" />
+          <img src="assets\images\ComidaColombiana/imagen2.jpg" alt="Negocio de comida colombiana con letrero llamativo y ambiente acogedor" class="w-full shrink-0" />
+          <img src="assets\images\ComidaColombiana/imagen3.jpg" alt="Restaurante típico en calle urbana con sillas de madera y plantas decorativas" class="w-full shrink-0" />
+          <img src="assets\images\ComidaColombiana/imagen4.jpg" alt="Exterior de local de comida colombiana con estilo tropical y ambiente cálido" class="w-full shrink-0" />
+          <img src="assets\images\ComidaColombiana/imagen5.jpg" alt="Vista frontal de cafetería o restaurante colombiano con decoración artesanal" class="w-full shrink-0" />
+          <img src="assets\images\ComidaColombiana/imagen6.jpg" alt="Establecimiento gastronómico con mesas al exterior, ideal para disfrutar comida colombiana" class="w-full shrink-0" />
+          <img src="assets\images\ComidaColombiana/imagen7.jpg" alt="Negocio local con fachada amarilla y ambiente natural, especializado en comida típica de Colombia" lass="w-full shrink-0" />
+        </div>
+
+      <!-- Botones -->
+        <button onclick="prevSlide()" class="absolute top-1/2 left-2 -translate-y-1/2 bg-black/50 text-white p-2 rounded-full">
+          ‹
+        </button>
+        <button onclick="nextSlide()" class="absolute top-1/2 right-2 -translate-y-1/2 bg-black/50 text-white p-2 rounded-full">
+          ›
+        </button>
+  </div>
+</div>
+<script>
+  const images = document.getElementById("carousel-images");
+  const totalSlides = images.children.length;
+  let index = 0;
+
+  function showSlide(i) {
+    index = (i + totalSlides) % totalSlides;
+    images.style.transform = `translateX(-${index * 100}%)`;
+  }
+
+  function nextSlide() {
+    showSlide(index + 1);
+  }
+
+  function prevSlide() {
+    showSlide(index - 1);
+  }
+</script>
+
+<div class="flex justify-center items-center gap-4 p-8 ">
+    <button onclick="generarNombre()" class="inline-block border-4 border-principal text-principal font-bold uppercase text-xl px-8 py-3 rounded-full shadow-lg hover:bg-principal hover:text-white transition duration-500">Generar nombre I.A</button>
+    <p id="resultado" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal"></p>
+</div>
+
+<script>
+  const nombres = [
+    "Sabor de Mi Tierra","La Cazuela Colombiana","El Rincón Paisa","Antojitos de Abuela","Fogón Colombiano","La Fonda Criolla","Arepa y Sazón","La Olla Antioqueña","Delicias del Llano","La Cuchara Colombiana","Sazón Cundiboyacense","Comida con Historia","Raíces y Sabores","El Platón Criollo","Hecho en Colombia","La Arepera Rodante","Calle del Sabor","Empanadas Express","Sazón al Paso","El Parche del Gusto","La Arepita Rebelde","Combi Criolla","Típico Street","Don Arepón","El Ají Viajero","Sabor sobre Ruedas","Antojos del Andén","Picoteo Urbano","Delicias al Vuelo","El Carrito Paisa","Mestizaje Colombiano","Arepa Fina","Fonda Urbana","Sabores con Altura","ColomBites","Tierra Viva","Arte & Sazón","GastroCriollo","Ají & Vino","Cocina Andina Moderna","Fusión Cafetera","La Mesa Mestiza","Raíces Urbanas","Típico Contemporáneo","Alma Colombiana","Reina Arepa","Arepísima","La Empanadería","Ñam Ñam Picadas","Arepamanía","Picadas La 13","Arepas & Más","El Empanadazo","Crocantes del Valle","Arepas El Golazo","El Picoteo Criollo","La Casa de la Arepa","Empanadas de Oro","Sabores en Círculo","Areparce","El Sabor de Mamá","Cocina de Abuelita","Mi Casita Colombiana","Del Fogón al Corazón","Con Amor y Arepa","El Rinconcito de Mamá","Sabor Familiar","Mesa Paisa","De Mi Casa a Tu Plato","La Sazón del Hogar","Qué Arepón","Ñero Sabor","La Chaza Criolla","El Tremendo Ají","Sabor y Vacile","La Arepa Loca","Tusa & Sazón","El Chévere Criollo","Baila y Come","El Jolgorio del Gusto","Sabor Caribe","Comidas del Pacífico","Antioquia en Tu Plato","Valle del Gusto","Costeñito Sabor","Llanero Sazón","Amazonía Viva","Santander Gourmet","Del Tolima con Amor","Montaña y Sazón","ColFood","Sazón Elemental","Criollab","ÑamCol","Pico & Arepa","GastroPaisa","Plátano y Punto","Ajicito Co","Delichamba","Colombia al Plato"
+];
+
+  function generarNombre() {
+    const aleatorio = nombres[Math.floor(Math.random() * nombres.length)];
+    document.getElementById("resultado").innerText = aleatorio;
+  }
+</script>
+
+
+  <section id="nombres" class="mt-24">
+    <h2 class="pt-4 text-3xl sm:text-4xl text-principal font-bold mb-6">Explora por categoría</h2>
+
+    <div class="flex flex-wrap gap-3 mb-10">
+      <button onclick="filtrar('Tradicionales y Típicos')" class="px-4 py-2 border-2 border-principal text-principal rounded-full hover:bg-principal hover:text-white transition">Tradicionales y Típicos</button>
+      <button onclick="filtrar('Callejeros y Urbanos')" class="px-4 py-2 border-2 border-principal text-principal rounded-full hover:bg-principal hover:text-white transition">Callejeros y Urbanos</button>
+      <button onclick="filtrar('Gourmet o Fusión')" class="px-4 py-2 border-2 border-principal text-principal rounded-full hover:bg-principal hover:text-white transition">Gourmet o Fusión</button>
+      <button onclick="filtrar('Enfocados en Arepas, Empanadas y Picadas')" class="px-4 py-2 border-2 border-principal text-principal rounded-full hover:bg-principal hover:text-white transition">Enfocados en Arepas, Empanadas y Picadas</button>
+      <button onclick="filtrar('Hogareños y Acogedores')" class="px-4 py-2 border-2 border-principal text-principal rounded-full hover:bg-principal hover:text-white transition">Hogareños y Acogedores</button>
+    </div>
+
+    <div id="lista-nombres" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div data-cat="Tradicionales y Típicos" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Sabor de Mi Tierra</h3>
+        <p class="text-sm text-gray-600 mt-1">Tradicionales y Típicos</p>
+      </div>
+      <div data-cat="Tradicionales y Típicos" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">La Cazuela Colombiana</h3>
+        <p class="text-sm text-gray-600 mt-1">Tradicionales y Típicos</p>
+      </div>
+      <div data-cat="Tradicionales y Típicos" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">El Rincón Paisa</h3>
+        <p class="text-sm text-gray-600 mt-1">Tradicionales y Típicos</p>
+      </div>
+      <div data-cat="Tradicionales y Típicos" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Antojitos de Abuela</h3>
+        <p class="text-sm text-gray-600 mt-1">Tradicionales y Típicos</p>
+      </div>
+      <div data-cat="Tradicionales y Típicos" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Fogón Colombiano</h3>
+        <p class="text-sm text-gray-600 mt-1">Tradicionales y Típicos</p>
+      </div>
+      <div data-cat="Tradicionales y Típicos" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">La Fonda Criolla</h3>
+        <p class="text-sm text-gray-600 mt-1">Tradicionales y Típicos</p>
+      </div>
+      <div data-cat="Tradicionales y Típicos" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Arepa y Sazón</h3>
+        <p class="text-sm text-gray-600 mt-1">Tradicionales y Típicos</p>
+      </div>
+      <div data-cat="Tradicionales y Típicos" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">La Olla Antioqueña</h3>
+        <p class="text-sm text-gray-600 mt-1">Tradicionales y Típicos</p>
+      </div>
+      <div data-cat="Tradicionales y Típicos" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Delicias del Llano</h3>
+        <p class="text-sm text-gray-600 mt-1">Tradicionales y Típicos</p>
+      </div>
+      <div data-cat="Tradicionales y Típicos" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">La Cuchara Colombiana</h3>
+        <p class="text-sm text-gray-600 mt-1">Tradicionales y Típicos</p>
+      </div>
+      <div data-cat="Tradicionales y Típicos" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Sazón Cundiboyacense</h3>
+        <p class="text-sm text-gray-600 mt-1">Tradicionales y Típicos</p>
+      </div>
+      <div data-cat="Tradicionales y Típicos" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Comida con Historia</h3>
+        <p class="text-sm text-gray-600 mt-1">Tradicionales y Típicos</p>
+      </div>
+      <div data-cat="Tradicionales y Típicos" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Raíces y Sabores</h3>
+        <p class="text-sm text-gray-600 mt-1">Tradicionales y Típicos</p>
+      </div>
+      <div data-cat="Tradicionales y Típicos" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">El Platón Criollo</h3>
+        <p class="text-sm text-gray-600 mt-1">Tradicionales y Típicos</p>
+      </div>
+      <div data-cat="Tradicionales y Típicos" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Hecho en Colombia</h3>
+        <p class="text-sm text-gray-600 mt-1">Tradicionales y Típicos</p>
+      </div>
+
+
+
+
+    
+      <div data-cat="Callejeros y Urbanos" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">La Arepera Rodante</h3>
+        <p class="text-sm text-gray-600 mt-1">Callejeros y Urbanos</p>
+      </div>
+      <div data-cat="Callejeros y Urbanos" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Calle del Sabor</h3>
+        <p class="text-sm text-gray-600 mt-1">Callejeros y Urbanos</p>
+      </div>
+      <div data-cat="Callejeros y Urbanos" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Empanadas Express</h3>
+        <p class="text-sm text-gray-600 mt-1">Callejeros y Urbanos</p>
+      </div>
+      <div data-cat="Callejeros y Urbanos" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Sazón al Paso</h3>
+        <p class="text-sm text-gray-600 mt-1">Callejeros y Urbanos</p>
+      </div>
+      <div data-cat="Callejeros y Urbanos" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">El Parche del Gusto</h3>
+        <p class="text-sm text-gray-600 mt-1">Callejeros y Urbanos</p>
+      </div>
+      <div data-cat="Callejeros y Urbanos" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">La Arepita Rebelde</h3>
+        <p class="text-sm text-gray-600 mt-1">Callejeros y Urbanos</p>
+      </div>
+      <div data-cat="Callejeros y Urbanos" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Combi Criolla</h3>
+        <p class="text-sm text-gray-600 mt-1">Callejeros y Urbanos</p>
+      </div>
+      <div data-cat="Callejeros y Urbanos" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Típico Street</h3>
+        <p class="text-sm text-gray-600 mt-1">Callejeros y Urbanos</p>
+      </div>
+      <div data-cat="Callejeros y Urbanos" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Don Arepón</h3>
+        <p class="text-sm text-gray-600 mt-1">Callejeros y Urbanos</p>
+      </div>
+      <div data-cat="Callejeros y Urbanos" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">El Ají Viajero</h3>
+        <p class="text-sm text-gray-600 mt-1">Callejeros y Urbanos</p>
+      </div>
+      <div data-cat="Callejeros y Urbanos" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Sabor sobre Ruedas</h3>
+        <p class="text-sm text-gray-600 mt-1">Callejeros y Urbanos</p>
+      </div>
+      <div data-cat="Callejeros y Urbanos" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Antojos del Andén</h3>
+        <p class="text-sm text-gray-600 mt-1">Callejeros y Urbanos</p>
+      </div>
+      <div data-cat="Callejeros y Urbanos" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Picoteo Urbano</h3>
+        <p class="text-sm text-gray-600 mt-1">Callejeros y Urbanos</p>
+      </div>
+      <div data-cat="Callejeros y Urbanos" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Delicias al Vuelo</h3>
+        <p class="text-sm text-gray-600 mt-1">Callejeros y Urbanos</p>
+      </div>
+      <div data-cat="Callejeros y Urbanos" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">El Carrito Paisa</h3>
+        <p class="text-sm text-gray-600 mt-1">Callejeros y Urbanos</p>
+      </div>
+
+
+
+
+
+
+      <div data-cat="Gourmet o Fusión" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Mestizaje Colombiano</h3>
+        <p class="text-sm text-gray-600 mt-1">Gourmet o Fusión</p>
+      </div>
+      <div data-cat="Gourmet o Fusión" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Arepa Fina</h3>
+        <p class="text-sm text-gray-600 mt-1">Gourmet o Fusión</p>
+      </div>
+      <div data-cat="Gourmet o Fusión" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Fonda Urbana</h3>
+        <p class="text-sm text-gray-600 mt-1">Gourmet o Fusión</p>
+      </div>
+      <div data-cat="Gourmet o Fusión" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">ColomBites</h3>
+        <p class="text-sm text-gray-600 mt-1">Gourmet o Fusión</p>
+      </div>
+      <div data-cat="Gourmet o Fusión" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Sabores con Altura</h3>
+        <p class="text-sm text-gray-600 mt-1">Gourmet o Fusión</p>
+      </div>
+      <div data-cat="Gourmet o Fusión" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Tierra Viva</h3>
+        <p class="text-sm text-gray-600 mt-1">Gourmet o Fusión</p>
+      </div>
+      <div data-cat="Gourmet o Fusión" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Arte & Sazón</h3>
+        <p class="text-sm text-gray-600 mt-1">Gourmet o Fusión</p>
+      </div>
+      <div data-cat="Gourmet o Fusión" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">GastroCriollo</h3>
+        <p class="text-sm text-gray-600 mt-1">Gourmet o Fusión</p>
+      </div>
+      <div data-cat="Gourmet o Fusión" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Ají & Vino</h3>
+        <p class="text-sm text-gray-600 mt-1">Gourmet o Fusión</p>
+      </div>
+      <div data-cat="Gourmet o Fusión" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Cocina Andina Moderna</h3>
+        <p class="text-sm text-gray-600 mt-1">Gourmet o Fusión</p>
+      </div>
+      <div data-cat="Gourmet o Fusión" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Fusión Cafetera</h3>
+        <p class="text-sm text-gray-600 mt-1">Gourmet o Fusión</p>
+      </div>
+      <div data-cat="Gourmet o Fusión" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">La Mesa Mestiza</h3>
+        <p class="text-sm text-gray-600 mt-1">Gourmet o Fusión</p>
+      </div>
+      <div data-cat="Gourmet o Fusión" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Raíces Urbanas</h3>
+        <p class="text-sm text-gray-600 mt-1">Gourmet o Fusión</p>
+      </div>
+      <div data-cat="Gourmet o Fusión" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Típico Contemporáneo</h3>
+        <p class="text-sm text-gray-600 mt-1">Gourmet o Fusión</p>
+      </div>
+      <div data-cat="Gourmet o Fusión" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Alma Colombiana</h3>
+        <p class="text-sm text-gray-600 mt-1">Gourmet o Fusión</p>
+      </div>
+
+
+
+      
+
+
+      <div data-cat="Enfocados en Arepas, Empanadas y Picadas" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Reina Arepa</h3>
+        <p class="text-sm text-gray-600 mt-1">Enfocados en Arepas, Empanadas y Picadas</p>
+      </div>
+      <div data-cat="Enfocados en Arepas, Empanadas y Picadas" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Arepísima</h3>
+        <p class="text-sm text-gray-600 mt-1">Enfocados en Arepas, Empanadas y Picadas</p>
+      </div>
+      <div data-cat="Enfocados en Arepas, Empanadas y Picadas" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">La Empanadería</h3>
+        <p class="text-sm text-gray-600 mt-1">Enfocados en Arepas, Empanadas y Picadas</p>
+      </div>
+      <div data-cat="Enfocados en Arepas, Empanadas y Picadas" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Ñam Ñam Picadas</h3>
+        <p class="text-sm text-gray-600 mt-1">Enfocados en Arepas, Empanadas y Picadas</p>
+      </div>
+      <div data-cat="Enfocados en Arepas, Empanadas y Picadas" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Arepamanía</h3>
+        <p class="text-sm text-gray-600 mt-1">Enfocados en Arepas, Empanadas y Picadas</p>
+      </div>
+      <div data-cat="Enfocados en Arepas, Empanadas y Picadas" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Picadas La 13</h3>
+        <p class="text-sm text-gray-600 mt-1">Enfocados en Arepas, Empanadas y Picadas</p>
+      </div>
+      <div data-cat="Enfocados en Arepas, Empanadas y Picadas" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Arepas & Más</h3>
+        <p class="text-sm text-gray-600 mt-1">Enfocados en Arepas, Empanadas y Picadas</p>
+      </div>
+      <div data-cat="Enfocados en Arepas, Empanadas y Picadas" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">El Empanadazo</h3>
+        <p class="text-sm text-gray-600 mt-1">Enfocados en Arepas, Empanadas y Picadas</p>
+      </div>
+      <div data-cat="Enfocados en Arepas, Empanadas y Picadas" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Crocantes del Valle</h3>
+        <p class="text-sm text-gray-600 mt-1">Enfocados en Arepas, Empanadas y Picadas</p>
+      </div>
+      <div data-cat="Enfocados en Arepas, Empanadas y Picadas" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Arepas El Golazo</h3>
+        <p class="text-sm text-gray-600 mt-1">Enfocados en Arepas, Empanadas y Picadas</p>
+      </div>
+      <div data-cat="Enfocados en Arepas, Empanadas y Picadas" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">El Picoteo Criollo</h3>
+        <p class="text-sm text-gray-600 mt-1">Enfocados en Arepas, Empanadas y Picadas</p>
+      </div>
+      <div data-cat="Enfocados en Arepas, Empanadas y Picadas" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">La Casa de la Arepa</h3>
+        <p class="text-sm text-gray-600 mt-1">Enfocados en Arepas, Empanadas y Picadas</p>
+      </div>
+      <div data-cat="Enfocados en Arepas, Empanadas y Picadas" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Empanadas de Oro</h3>
+        <p class="text-sm text-gray-600 mt-1">Enfocados en Arepas, Empanadas y Picadas</p>
+      </div>
+      <div data-cat="Enfocados en Arepas, Empanadas y Picadas" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Sabores en Círculo</h3>
+        <p class="text-sm text-gray-600 mt-1">Enfocados en Arepas, Empanadas y Picadas</p>
+      </div>
+      <div data-cat="Enfocados en Arepas, Empanadas y Picadas" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Areparce</h3>
+        <p class="text-sm text-gray-600 mt-1">Enfocados en Arepas, Empanadas y Picadas</p>
+      </div>
+
+
+
+
+
+
+
+
+      <div data-cat="Hogareños y Acogedores" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">El Sabor de Mamá</h3>
+        <p class="text-sm text-gray-600 mt-1">Hogareños y Acogedores</p>
+      </div>
+      <div data-cat="Hogareños y Acogedores" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Cocina de Abuelita</h3>
+        <p class="text-sm text-gray-600 mt-1">Hogareños y Acogedores</p>
+      </div>
+      <div data-cat="Hogareños y Acogedores" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Mi Casita Colombiana
+
+</h3>
+        <p class="text-sm text-gray-600 mt-1">Hogareños y Acogedores</p>
+      </div>
+      <div data-cat="Hogareños y Acogedores" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Del Fogón al Corazón</h3>
+        <p class="text-sm text-gray-600 mt-1">Hogareños y Acogedores</p>
+      </div>
+      <div data-cat="Hogareños y Acogedores" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Con Amor y Arepa</h3>
+        <p class="text-sm text-gray-600 mt-1">Hogareños y Acogedores</p>
+      </div>
+      <div data-cat="Hogareños y Acogedores" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">El Rinconcito de Mamá</h3>
+        <p class="text-sm text-gray-600 mt-1">Hogareños y Acogedores</p>
+      </div>
+      <div data-cat="Hogareños y Acogedores" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Sabor Familiar</h3>
+        <p class="text-sm text-gray-600 mt-1">Hogareños y Acogedores</p>
+      </div>
+      <div data-cat="Hogareños y Acogedores" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Mesa Paisa</h3>
+        <p class="text-sm text-gray-600 mt-1">Hogareños y Acogedores</p>
+      </div>
+      <div data-cat="Hogareños y Acogedores" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">De Mi Casa a Tu Plato</h3>
+        <p class="text-sm text-gray-600 mt-1">Hogareños y Acogedores</p>
+      </div>
+      <div data-cat="Hogareños y Acogedores" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">La Sazón del Hogar</h3>
+        <p class="text-sm text-gray-600 mt-1">Hogareños y Acogedores</p>
+      </div>
+      <div data-cat="Hogareños y Acogedores" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Qué Arepón</h3>
+        <p class="text-sm text-gray-600 mt-1">Hogareños y Acogedores</p>
+      </div>
+      <div data-cat="Hogareños y Acogedores" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Ñero Sabor</h3>
+        <p class="text-sm text-gray-600 mt-1">Hogareños y Acogedores</p>
+      </div>
+      <div data-cat="Hogareños y Acogedores" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">La Chaza Criolla</h3>
+        <p class="text-sm text-gray-600 mt-1">Hogareños y Acogedores</p>
+      </div>
+      <div data-cat="Hogareños y Acogedores" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">El Tremendo Ají</h3>
+        <p class="text-sm text-gray-600 mt-1">Hogareños y Acogedores</p>
+      </div>
+      <div data-cat="Hogareños y Acogedores" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Sabor y Vacile</h3>
+        <p class="text-sm text-gray-600 mt-1">Hogareños y Acogedores</p>
+      </div>
+      <div data-cat="Hogareños y Acogedores" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">La Arepa Loca</h3>
+        <p class="text-sm text-gray-600 mt-1">Hogareños y Acogedores</p>
+      </div>
+      <div data-cat="Hogareños y Acogedores" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Tusa & Sazón
+
+</h3>
+        <p class="text-sm text-gray-600 mt-1">Hogareños y Acogedores</p>
+      </div>
+      <div data-cat="Hogareños y Acogedores" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">El Chévere Criollo</h3>
+        <p class="text-sm text-gray-600 mt-1">Hogareños y Acogedores</p>
+      </div>
+      <div data-cat="Hogareños y Acogedores" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Baila y Come</h3>
+        <p class="text-sm text-gray-600 mt-1">Hogareños y Acogedores</p>
+      </div>
+      <div data-cat="Hogareños y Acogedores" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">El Jolgorio del Gusto</h3>
+        <p class="text-sm text-gray-600 mt-1">Hogareños y Acogedores</p>
+      </div> 
+      <div data-cat="Hogareños y Acogedores" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Sabor Caribe</h3>
+        <p class="text-sm text-gray-600 mt-1">Hogareños y Acogedores</p>
+      </div> 
+      <div data-cat="Hogareños y Acogedores" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Comidas del Pacífico</h3>
+        <p class="text-sm text-gray-600 mt-1">Hogareños y Acogedores</p>
+      </div> 
+      <div data-cat="Hogareños y Acogedores" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Antioquia en Tu Plato</h3>
+        <p class="text-sm text-gray-600 mt-1">Hogareños y Acogedores</p>
+      </div> 
+      <div data-cat="Hogareños y Acogedores" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Valle del Gusto</h3>
+        <p class="text-sm text-gray-600 mt-1">Hogareños y Acogedores</p>
+      </div> 
+      <div data-cat="Hogareños y Acogedores" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Costeñito Sabor</h3>
+        <p class="text-sm text-gray-600 mt-1">Hogareños y Acogedores</p>
+      </div> 
+      <div data-cat="Hogareños y Acogedores" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Llanero Sazón</h3>
+        <p class="text-sm text-gray-600 mt-1">Hogareños y Acogedores</p>
+      </div>
+      <div data-cat="Hogareños y Acogedores" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Amazonía Viva</h3>
+        <p class="text-sm text-gray-600 mt-1">Hogareños y Acogedores</p>
+      </div> 
+      <div data-cat="Hogareños y Acogedores" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Santander Gourmet</h3>
+        <p class="text-sm text-gray-600 mt-1">Hogareños y Acogedores</p>
+      </div>
+      <div data-cat="Hogareños y Acogedores" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Del Tolima con Amor</h3>
+        <p class="text-sm text-gray-600 mt-1">Hogareños y Acogedores</p>
+      </div> 
+      <div data-cat="Hogareños y Acogedores" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Montaña y Sazón</h3>
+        <p class="text-sm text-gray-600 mt-1">Hogareños y Acogedores</p>
+      </div>
+      <div data-cat="Hogareños y Acogedores" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">ColFood</h3>
+        <p class="text-sm text-gray-600 mt-1">Hogareños y Acogedores</p>
+      </div> 
+      <div data-cat="Hogareños y Acogedores" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Sazón Elemental</h3>
+        <p class="text-sm text-gray-600 mt-1">Hogareños y Acogedores</p>
+      </div> 
+      <div data-cat="Hogareños y Acogedores" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Criollab</h3>
+        <p class="text-sm text-gray-600 mt-1">Hogareños y Acogedores</p>
+      </div> 
+      <div data-cat="Hogareños y Acogedores" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">ÑamCol</h3>
+        <p class="text-sm text-gray-600 mt-1">Hogareños y Acogedores</p>
+      </div>
+      <div data-cat="Hogareños y Acogedores" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Pico & Arepa</h3>
+        <p class="text-sm text-gray-600 mt-1">Hogareños y Acogedores</p>
+      </div> 
+      <div data-cat="Hogareños y Acogedores" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">GastroPaisa</h3>
+        <p class="text-sm text-gray-600 mt-1">Hogareños y Acogedores</p>
+      </div> 
+
+    </div>
+  </section>
+
+  <script>
+    function filtrar(categoria) {
+      const tarjetas = document.querySelectorAll('#lista-nombres > div');
+      tarjetas.forEach(tarjeta => {
+        if (tarjeta.dataset.cat === categoria || categoria === '') {
+          tarjeta.classList.remove('hidden');
+        } else {
+          tarjeta.classList.add('hidden');
+        }
+      });
+    }
+  </script>
 </body>
+<footer class="m-8 w-auto  py-4 text-white" style="background-color: #00c4cc;">
+  <div class="container mx-auto text-center">
+    <p>© 2025 INSPIRA NEGOCIOS. Todos los derechos reservados.</p>
+  </div>
+</footer>
 </html>

@@ -21,6 +21,21 @@
     }
   </script>
   <style>
+    
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    }
+
+.animate-fade-in {
+  animation: fade-in 0.4s ease-in-out;
+}
     html {
     scroll-behavior: smooth;
     }
@@ -61,17 +76,32 @@
         </button>
 
           <ul class="hidden md:flex gap-6 text-gray-700">
-              <li><a href="Inicio.html"  class="text-principal border-2 border-principal px-3 py-1 rounded-full text-sm font-bold font-sans hover:bg-principal hover:text-white transition" >INICIO</a></li>
+              <li><a href="quienessomos.html"  class="text-principal border-2 border-principal px-3 py-1 rounded-full text-sm font-bold font-sans hover:bg-principal hover:text-white transition" >GUIA PARA NOMRAR A TU NEGOCIO</a></li>
               <li><a href="index.html"  class="text-principal border-2 border-principal px-3 py-1 rounded-full text-sm font-bold font-sans hover:bg-principal hover:text-white transition" >LOS MEJORES NOMBRES PARA MI NEGOCIO</a></li>
               <li><a href="#"  class="text-principal border-2 border-principal px-3 py-1 rounded-full text-sm font-bold font-sans hover:bg-principal hover:text-white transition" >¿QUIÉN HIZO ESTA PÁGINA?</a></li>  
           </ul>
 
           <!-- Menú móvil -->
         <div id="mobile-menu" class="hidden md:hidden px-4  ">
-          <ul class="flex flex-col space-y-2 py-2">
-            <li><a href="#"  class="text-principal border-2 border-principal px-3 py-1 rounded-full text-sm font-bold font-sans hover:bg-principal hover:text-white transition" >INICIO</a></li>
-              <li><a href="#"  class="text-principal border-2 border-principal px-3 py-1 rounded-full text-sm font-bold font-sans hover:bg-principal hover:text-white transition" >LOS MEJORES NOMBRES PARA MI NEGOCIO</a></li>
-              <li><a href="#"  class="text-principal border-2 border-principal px-3 py-1 rounded-full text-sm font-bold font-sans hover:bg-principal hover:text-white transition" >¿QUIÉN HIZO ESTA PÁGINA?</a></li>  
+          <ul class="flex flex-col items-center gap-2 w-full px-4 animate-fade-in">
+            <li>
+              <a href="quienessomos.html"
+                class="w-full max-w-xs text-principal border border-principal px-3 py-1.5 rounded-full text-sm font-semibold font-sans hover:bg-principal hover:text-white transition-all duration-300 ease-in-out text-center block">
+                GUÍA PARA NOMBRAR A TU NEGOCIO
+              </a>
+            </li>
+            <li>
+              <a href="index.html"
+                class="w-full max-w-xs text-principal border border-principal px-3 py-1.5 rounded-full text-sm font-semibold font-sans hover:bg-principal hover:text-white transition-all duration-300 ease-in-out text-center block">
+                LOS MEJORES NOMBRES PARA MI NEGOCIO
+              </a>
+            </li>
+            <li>
+              <a href="#"
+                class="w-full max-w-xs text-principal border border-principal px-3 py-1.5 rounded-full text-sm font-semibold font-sans hover:bg-principal hover:text-white transition-all duration-300 ease-in-out text-center block">
+                ¿QUIÉN HIZO ESTA PÁGINA?
+              </a>
+            </li>
           </ul>
         </div>
 

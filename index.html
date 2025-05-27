@@ -23,12 +23,22 @@
       }
     }
   </script>
+  
   <style>
-  .texto-parrafo {
-    @apply texto-parrafo;
+    @keyframes fade-in {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    } 
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
-</style>
-  <style>
+
+.animate-fade-in {
+  animation: fade-in 0.4s ease-in-out;
+}
     * {
       margin: 0;
       padding: 0;
@@ -156,17 +166,33 @@
         </button>
 
           <ul class="hidden md:flex gap-6 text-gray-700">
-              <li><a href="Inicio.html">LOS MEJORES NOMBRES PARA MI NEGOCIO</a></li>
-              <li><a href="Inicio.html">¿QUIÉN HIZO ESTA PÁGINA?</a></li>
+              <li><a href="quienessomos.html">GUIA PARA NOMRAR A TU NEGOCIO</a></li>
+              <li><a href="quienessomos.html">¿QUIÉN HIZO ESTA PÁGINA?</a></li>
+              
           </ul>
 
           <!-- Menú móvil -->
-        <div id="mobile-menu" class="hidden md:hidden px-4  ">
-          <ul class="flex flex-col space-y-2 py-2">
-            <li><a href="#"  class="text-principal border-2 border-principal px-3 py-1 rounded-full text-sm font-bold font-sans hover:bg-principal hover:text-white transition" >INICIO</a></li>
-              <li><a href="#"  class="text-principal border-2 border-principal px-3 py-1 rounded-full text-sm font-bold font-sans hover:bg-principal hover:text-white transition" >LOS MEJORES NOMBRES PARA MI NEGOCIO</a></li>
-              <li><a href="#"  class="text-principal border-2 border-principal px-3 py-1 rounded-full text-sm font-bold font-sans hover:bg-principal hover:text-white transition" >¿QUIÉN HIZO ESTA PÁGINA?</a></li>  
-          </ul>
+         <div id="mobile-menu" class="hidden md:hidden px-4  ">
+            <ul class="flex flex-col items-center gap-2 w-full px-4 animate-fade-in">
+            <li>
+                <a href="quienessomos.html"
+                class="w-full max-w-xs text-principal border border-principal px-3 py-1.5 rounded-full text-sm font-semibold font-sans hover:bg-principal hover:text-white transition-all duration-300 ease-in-out text-center block">
+                GUÍA PARA NOMBRAR A TU NEGOCIO
+                </a>
+            </li>
+            <li>
+                <a href="index.html"
+                class="w-full max-w-xs text-principal border border-principal px-3 py-1.5 rounded-full text-sm font-semibold font-sans hover:bg-principal hover:text-white transition-all duration-300 ease-in-out text-center block">
+                LOS MEJORES NOMBRES PARA MI NEGOCIO
+                </a>
+            </li>
+            <li>
+                <a href="#"
+                class="w-full max-w-xs text-principal border border-principal px-3 py-1.5 rounded-full text-sm font-semibold font-sans hover:bg-principal hover:text-white transition-all duration-300 ease-in-out text-center block">
+                ¿QUIÉN HIZO ESTA PÁGINA?
+                </a>
+            </li>
+            </ul>
         </div>
 
         <script>
@@ -187,52 +213,53 @@
       
     <div class="flex flex-col md:flex-row items-top gap-8 p-8 bg-white rounded-lg shadow-lg mx-auto mb-6">
       
-      <section class="my-12 max-w-6xl mx-auto px-4">
-  <h2 class="text-3xl font-bold text-principal mb-6 text-center">Explora por categoría</h2>
-  <h1 class="text-3xl font-bold  text-principal mb-6 text-center">Nombres PERFECTOS para tus negocios</h1>
-  <p class="text-base sm:text-lg leading-relaxed text-gray-800 font-sans mb-6">
-        🛠️ El primer paso de un gran negocio es un gran nombre. Si ya tienes uno, no esperes más: empieza a construir tu marca hoy.
-    </p>
-  <div class="grid gap-8 grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
-
-    <!-- Subpágina: Nombres para Cafeterías -->
-    <a href="NombresLimpieza.html" class="block rounded-xl overflow-hidden shadow hover:shadow-lg transition">
-      <img src="assets\images\Limpieza\imagen2.jpg" alt="Nombres para cafeterías" class="w-full h-40 object-cover">
-      <div class="p-4 bg-white">
-        <h3 class="text-xl font-bold text-gray-800 mb-2">Nombres para Limpieza</h3>
-        <p class="text-gray-600 text-sm">Descubre ideas frescas, modernas y únicas para tu negocio de limpieza.</p>
-      </div>
-    </a>
-
+  <section class="my-12 max-w-6xl mx-auto px-4">
     
-    <!-- Subpágina: Nombres para Cafeterías -->
-    <a href="NombresCafeterias.html" class="block rounded-xl overflow-hidden shadow hover:shadow-lg transition">
-      <img src="assets\images\Cafeteria/imagen1.jpg" alt="Nombres para cafeterías" class="w-full h-40 object-cover">
-      <div class="p-4 bg-white">
-        <h3 class="text-xl font-bold text-gray-800 mb-2">Nombres para Cafeterías</h3>
-        <p class="text-gray-600 text-sm">Descubre ideas dulces, modernas y únicas para tu café.</p>
-      </div>
-    </a>
+    <h1 class="text-3xl font-bold  text-principal mb-6 text-center">Nombres PERFECTOS para tus negocios</h1>
+    <h2 class="text-3xl font-bold text-principal mb-6 text-center">Explora por categoría</h2>
+    <p class="text-base sm:text-lg leading-relaxed text-gray-800 font-sans mb-6">
+          🛠️ El primer paso de un gran negocio es un gran nombre. Si ya tienes uno, no esperes más: empieza a construir tu marca hoy.
+      </p>
+    <div class="grid gap-8 grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
 
-    <!-- Subpágina: Nombres Elegantes -->
-    <a href="/nombres-elegantes" class="block rounded-xl overflow-hidden shadow hover:shadow-lg transition">
-      <img src="img/elegante.jpg" alt="Nombres elegantes para negocios" class="w-full h-40 object-cover">
-      <div class="p-4 bg-white">
-        <h3 class="text-xl font-bold text-gray-800 mb-2">Nombres Elegantes</h3>
-        <p class="text-gray-600 text-sm">Inspírate con nombres sofisticados y memorables.</p>
-      </div>
-    </a>
+      <!-- Subpágina: Nombres para Cafeterías -->
+      <a href="NombresLimpieza.html" class="block rounded-xl overflow-hidden shadow hover:shadow-lg transition">
+        <img src="assets\images\Limpieza\imagen2.jpg" alt="Fachada de una tienda de productos de limpieza con toldo azul y plantas decorativas." class="w-full h-40 object-cover">
+        <div class="p-4 bg-white">
+          <h3 class="text-xl font-bold text-gray-800 mb-2">Nombres Para Negocios Limpieza</h3>
+          <p class="text-gray-600 text-sm">Descubre ideas frescas, modernas y únicas para tu negocio de limpieza.</p>
+        </div>
+      </a>
 
-    <!-- Subpágina: Nombres Divertidos -->
-    <a href="/nombres-divertidos" class="block rounded-xl overflow-hidden shadow hover:shadow-lg transition">
-      <img src="img/divertido.jpg" alt="Nombres divertidos y creativos" class="w-full h-40 object-cover">
-      <div class="p-4 bg-white">
-        <h3 class="text-xl font-bold text-gray-800 mb-2">Nombres Divertidos</h3>
-        <p class="text-gray-600 text-sm">Haz que tu marca destaque con un nombre lleno de personalidad.</p>
-      </div>
-    </a>
+      
+      <!-- Subpágina: Nombres para Cafeterías -->
+      <a href="NombresCafeterias.html" class="block rounded-xl overflow-hidden shadow hover:shadow-lg transition">
+        <img src="assets\images\Cafeteria/imagen1.jpg" alt="Entrada de una cafetería elegante con mesas al aire libre y letrero “Café Serra”." class="w-full h-40 object-cover">
+        <div class="p-4 bg-white">
+          <h3 class="text-xl font-bold text-gray-800 mb-2">Nombres Para Negocios Cafeterías</h3>
+          <p class="text-gray-600 text-sm">Descubre ideas dulces, modernas y únicas para tu café.</p>
+        </div>
+      </a>
 
-  </div>
+      <!-- Subpágina: Nombres Elegantes -->
+      <a href="NombresComidaCol.html" class="block rounded-xl overflow-hidden shadow hover:shadow-lg transition">
+        <img src="assets/images/ComidaColombiana/imagen1.jpg" alt="Restaurante con ambiente tropical y letrero “Saborasa”, ideal para marcas sofisticadas." class="w-full h-40 object-cover">
+        <div class="p-4 bg-white">
+          <h3 class="text-xl font-bold text-gray-800 mb-2">Nombres Para Negocios Comidas Colombianas</h3>
+          <p class="text-gray-600 text-sm">Nombres con sabor colombiano: auténticos, creativos y listos para destacar tu negocio de comida.</p>
+        </div>
+      </a>
+
+      <!-- Subpágina: Nombres Divertidos -->
+      <a href="NombresUnas.html" class="block rounded-xl overflow-hidden shadow hover:shadow-lg transition">
+        <img src="assets/images/Unas/imagen1.jpg" alt="Nombres divertidos y creativos" class="w-full h-40 object-cover">
+        <div class="p-4 bg-white">
+          <h3 class="text-xl font-bold text-gray-800 mb-2">Nombres Divertidos</h3>
+          <p class="text-gray-600 text-sm">Haz que tu marca destaque con un nombre lleno de personalidad.</p>
+        </div>
+      </a>
+
+    </div>
 </section>
         
         

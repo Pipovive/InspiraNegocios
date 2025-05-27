@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inspira Negocios - Nombres Nombres Naturales y ZenSs</title>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            archivo: ['"Archivo Black"', 'sans-serif']
+          },
+          colors: {
+            principal: '#00B9C7'
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    @keyframes fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to    {
+        opacity: 1;
+        transform: translateY(0);
+        }
+    }
+
+    .animate-fade-in {
+        animation: fade-in 0.4s ease-in-out;
+    }
+    html {
+    scroll-behavior: smooth;
+    }
+    body {
+      background-image: url('assets/images/Comunes/fondo.png');
+      background-repeat: repeat;
+      background-size: 700px;
+      background-attachment: fixed;
+      background-color: #f5f5f5;
+    }
+    .nube {
+      animation: flotar 6s ease-in-out infinite;
+    }
+    @keyframes flotar {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(50px); }
+      100% { transform: translateY(0px); }
+    }
+  </style>
+</head>
+<body class="font-archivo text-[#222] bg-white px-10 sm:px-24 pt-6">
+  <header class="flex justify-between items-center flex-wrap mb-6">
+
+    <div class="flex items-center gap-4">
+      <img src="assets\images\Comunes\logo.png" alt="Logo Inspira Negocios" class="h-20">
+      <div>
+        <!-- <strong class="text-xl">INSPIRA</strong><br>
+        <span class="font-sans text-sm">NEGOCIOS</span> -->
+      </div>
+    </div>
+
+    <nav>
+       <!-- Botón Hamburguesa -->
+        <button id="menu-btn" class="md:hidden text-gray-700 focus:outline-none">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+
+          <ul class="hidden md:flex gap-6 text-gray-700">
+              <li><a href="quienessomos.html"  class="text-principal border-2 border-principal px-3 py-1 rounded-full text-sm font-bold font-sans hover:bg-principal hover:text-white transition" >GUIA PARA NOMRAR A TU NEGOCIO</a></li>
+              <li><a href="index.html"  class="text-principal border-2 border-principal px-3 py-1 rounded-full text-sm font-bold font-sans hover:bg-principal hover:text-white transition" >LOS MEJORES NOMBRES PARA MI NEGOCIO</a></li>
+              <li><a href="#"  class="text-principal border-2 border-principal px-3 py-1 rounded-full text-sm font-bold font-sans hover:bg-principal hover:text-white transition" >¿QUIÉN HIZO ESTA PÁGINA?</a></li>  
+          </ul>
+
+          <!-- Menú móvil -->
+        <div id="mobile-menu" class="hidden md:hidden px-4  ">
+         <ul class="flex flex-col items-center gap-2 w-full px-4 animate-fade-in">
+            <li>
+                <a href="quienessomos.html"
+                class="w-full max-w-xs text-principal border border-principal px-3 py-1.5 rounded-full text-sm font-semibold font-sans hover:bg-principal hover:text-white transition-all duration-300 ease-in-out text-center block">
+                GUÍA PARA NOMBRAR A TU NEGOCIO
+                </a>
+            </li>
+            <li>
+                <a href="index.html"
+                class="w-full max-w-xs text-principal border border-principal px-3 py-1.5 rounded-full text-sm font-semibold font-sans hover:bg-principal hover:text-white transition-all duration-300 ease-in-out text-center block">
+                LOS MEJORES NOMBRES PARA MI NEGOCIO
+                </a>
+            </li>
+            <li>
+                <a href="#"
+                class="w-full max-w-xs text-principal border border-principal px-3 py-1.5 rounded-full text-sm font-semibold font-sans hover:bg-principal hover:text-white transition-all duration-300 ease-in-out text-center block">
+                ¿QUIÉN HIZO ESTA PÁGINA?
+                </a>
+            </li>
+        </ul>
+
+        </div>
+
+        <script>
+          const menuBtn = document.getElementById('menu-btn');
+          const mobileMenu = document.getElementById('mobile-menu');
+
+          menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+          });
+        </script>
+    </nav>
+
+    <!-- <nav class="flex gap-2 flex-wrap mt-2 sm:gap-3 sm:mt-4 text-sm sm:text-base">
+      <a href="#" class="text-principal border-2 border-principal px-3 py-1 rounded-full text-sm font-bold font-sans hover:bg-principal hover:text-white transition">INICIO</a>
+      <a href="#" class="text-principal border-2 border-principal px-3 py-1 rounded-full text-sm font-bold font-sans hover:bg-principal hover:text-white transition">MAS TENDENCIA DE NOMBRES EN 2025</a>
+      <a href="#" class="text-principal border-2 border-principal px-3 py-1 rounded-full text-sm font-bold font-sans hover:bg-principal hover:text-white transition">¿QUIÉN HIZO ESTA PÁGINA?</a>
+    </nav> -->
+    
+  </header>
+
+  <main class="flex flex-wrap justify-between items-start gap-10 mt-10">
+    <div class="max-w-xl pr-6">
+      <h1 class="text-principal text-5xl sm:text-5x1 font-bold leading-tight mb-4">100 NOMBRES GRATIS PARA TU NEGOCIO DE UÑAS</h1>
+    <p class="text-base sm:text-lg leading-relaxed text-gray-800 font-sans mb-6">
+       💅 Te regalamos 100 nombres únicos y listos para usar para que tú también empieces tu salón de uñas con estilo y fuerza. ✨ Inspírate, elige tu nombre y haz que tu emprendimiento brille desde la primera manicura
+    </p>
+      <a href="#nombres" class="inline-block border-4 border-principal text-principal font-bold uppercase text-xl px-8 py-3 rounded-full shadow-lg hover:bg-principal hover:text-white transition duration-500">MÍRALOS AQUÍ</a>
+</div>
+    <div class="relative max-w-md">
+      <img src="assets/images/Comunes/nube.png" alt="nube decorativa" class="absolute -top-20 -left-20 w-[120%] opacity-40 nube">
+      <img src="assets\images\unas/ilustracion.png" alt="Ilustración estilo plano de un puesto de comida colombiana con una mujer sirviendo platos típicos como arepas y empanadas, y un cliente realizando el pago, todo en tonos turquesa" class="relative z-10 w-full h-auto">
+    </div>
+  </main>
+
+  <div class="p-2 flex flex-col items-left mt-24 w-full" >
+      <h2 class="pt-6 sm:text-4xl text-principal font-bold mb-6">ELLOS YA DIERON EL PRIMER PASO, ¿Y TÚ?</h2>
+    <p class="text-base sm:text-lg leading-relaxed text-gray-800 font-sans mb-6">
+    ¿Estás por lanzar tu salón de uñas o negocio de belleza? 💖 Te ayudamos con 100 nombres creativos, memorables y llenos de glamour.¡Haz que tu marca destaque desde el primer toque de color! 🎨💅
+    </p>
+        <div class="relative w-full max-w-xl mx-auto overflow-hidden rounded-lg">
+
+        <div class="flex transition-transform duration-500 ease-in-out" id="carousel-images">
+          <img src="assets\images\unas/imagen1.jpg" alt="Fachada de restaurante colombiano con decoración rústica y mesas al aire libre" class="w-full shrink-0" />
+          <img src="assets\images\unas/imagen2.jpg" alt="Negocio de comida colombiana con letrero llamativo y ambiente acogedor" class="w-full shrink-0" />
+          <img src="assets\images\unas/imagen3.jpg" alt="Restaurante típico en calle urbana con sillas de madera y plantas decorativas" class="w-full shrink-0" />
+          <img src="assets\images\unas/imagen4.jpg" alt="Exterior de local de comida colombiana con estilo tropical y ambiente cálido" class="w-full shrink-0" />
+          <img src="assets\images\unas/imagen5.jpg" alt="Vista frontal de cafetería o restaurante colombiano con decoración artesanal" class="w-full shrink-0" />
+          <img src="assets\images\unas/imagen6.jpg" alt="Establecimiento gastronómico con mesas al exterior, ideal para disfrutar comida colombiana" class="w-full shrink-0" />
+          <img src="assets\images\unas/imagen7.jpg" alt="Negocio local con fachada amarilla y ambiente natural, especializado en comida típica de Colombia" lass="w-full shrink-0" />
+        </div>
+
+      <!-- Botones -->
+        <button onclick="prevSlide()" class="absolute top-1/2 left-2 -translate-y-1/2 bg-black/50 text-white p-2 rounded-full">
+          ‹
+        </button>
+        <button onclick="nextSlide()" class="absolute top-1/2 right-2 -translate-y-1/2 bg-black/50 text-white p-2 rounded-full">
+          ›
+        </button>
+  </div>
+</div>
+<script>
+  const images = document.getElementById("carousel-images");
+  const totalSlides = images.children.length;
+  let index = 0;
+
+  function showSlide(i) {
+    index = (i + totalSlides) % totalSlides;
+    images.style.transform = `translateX(-${index * 100}%)`;
+  }
+
+  function nextSlide() {
+    showSlide(index + 1);
+  }
+
+  function prevSlide() {
+    showSlide(index - 1);
+  }
+</script>
+
+<div class="flex justify-center items-center gap-4 p-8 ">
+    <button onclick="generarNombre()" class="inline-block border-4 border-principal text-principal font-bold uppercase text-xl px-8 py-3 rounded-full shadow-lg hover:bg-principal hover:text-white transition duration-500">Generar nombre I.A</button>
+    <p id="resultado" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        
+    </p>
+</div>
+
+<script>
+  const nombres = [
+    "Uñas de París", "Belleza Real", "Cristal Nails", "Estilo Imperial", "Diamante Rosa", "Glamour Total", "Lujosas Uñas", "Reina del Esmalte", "Alta Manicura", "Perla & Brillo", "Diva Nails", "Esencia Fina", "Brillo Real", "Uñas de Cristal", "Estilo Noble", "Uñas de Encanto", "Cuarzo Rosa", "Clásica & Chic", "Brillo de Reina", "Royal Touch Nails",
+  "Uñarte", "Colorín Nails", "Manimágica", "Brillitos Locos", "Uñas a Mil", "Arcoíris Nails", "EsmalTienda", "Divina Manía", "Súper Uñas", "PopNails", "ArteManos", "Uñitas Pop", "Wow Nails", "Coloretta", "EsmalteManía", "Manos Mágicas", "Deditos Felices", "Loca por las Uñas", "Nailifornia", "Pink Punch",
+  "Trendy Nails", "Chic Studio", "Fashion Tips", "Uñas Glam", "Top Coat", "Esmalte Vogue", "Uñas Runway", "Manicure Trend", "Urban Nails", "Fancy Fingers", "Brilla Chic", "Vogue Tips", "Uñas de Pasarela", "FlashNail", "Glossy Nails", "Polished Babe", "The Nail Edit", "Nail Couture", "Glam Studio", "Pink & Gold",
+  "Uñas de Loto", "Calm Nails", "Estilo Orgánico", "Manos Zen", "Esencia Natural", "Brisa & Esmalte", "Uñas Raíces", "Jardín de Uñas", "Alma Rosa", "Verde Manicure", "Serenidad Nails", "Tierra y Uñas", "Uñas Botánicas", "Pétalo Studio", "Bamboo Nails", "Uña & Flor", "Brillo Puro", "Paz en Tus Manos", "Aura Nails", "Mandala Studio",
+  "Uñas Caribeñas", "Café y Uñas", "Sabrosura Nails", "Manos Paisas", "Cumbia Color", "Brillo de Café", "Uñas Tropicales", "Arepa Nails", "Uñas con Sazón", "Colombian Chic", "Sabor a Brillo", "Tropinails", "Esmalte Cafetero", "Uñas con Ritmo", "Color Guayaba", "Brilla Mi Tierra", "Nail Colombia", "Uñas Candela", "Viva Color", "Uñas de mi Tierra"
+];
+
+  function generarNombre() {
+    const aleatorio = nombres[Math.floor(Math.random() * nombres.length)];
+    document.getElementById("resultado").innerText = aleatorio;
+  }
+</script>
+
+
+  <section id="nombres" class="mt-24">
+    <h2 class="pt-4 text-3xl sm:text-4xl text-principal font-bold mb-6">Explora por categoría</h2>
+
+    <div class="flex flex-wrap gap-3 mb-10">
+      <button onclick="filtrar('Nombres Elegantes y Sofisticados')" class="px-4 py-2 border-2 border-principal text-principal rounded-full hover:bg-principal hover:text-white transition">Nombres Elegantes y Sofisticados</button>
+      <button onclick="filtrar('Nombres Creativos y Divertidos')" class="px-4 py-2 border-2 border-principal text-principal rounded-full hover:bg-principal hover:text-white transition">Nombres Creativos y Divertidos</button>
+      <button onclick="filtrar('Nombres Glam y Fashion')" class="px-4 py-2 border-2 border-principal text-principal rounded-full hover:bg-principal hover:text-white transition">Nombres Glam y Fashion</button>
+      <button onclick="filtrar('Nombres Naturales y Zen')" class="px-4 py-2 border-2 border-principal text-principal rounded-full hover:bg-principal hover:text-white transition">Nombres Naturales y Zen</button>
+      <button onclick="filtrar('Nombres con Sabor Latino / Colombiano')" class="px-4 py-2 border-2 border-principal text-principal rounded-full hover:bg-principal hover:text-white transition">Nombres con Sabor Latino / Colombiano</button>
+    </div>
+
+    <div id="lista-nombres" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div data-cat="Nombres Elegantes y Sofisticados" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Uñas de París</h3>
+        <p class="text-sm text-gray-600 mt-1">Nombres Elegantes y Sofisticados</p>
+      </div>
+      <div data-cat="Nombres Elegantes y Sofisticados" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Belleza Real</h3>
+        <p class="text-sm text-gray-600 mt-1">Nombres Elegantes y Sofisticados</p>
+      </div>
+      <div data-cat="Nombres Elegantes y Sofisticados" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Cristal Nails</h3>
+        <p class="text-sm text-gray-600 mt-1">Nombres Elegantes y Sofisticados</p>
+      </div>
+      <div data-cat="Nombres Elegantes y Sofisticados" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Estilo Imperial</h3>
+        <p class="text-sm text-gray-600 mt-1">Nombres Elegantes y Sofisticados</p>
+      </div>
+      <div data-cat="Nombres Elegantes y Sofisticados" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Diamante Rosa</h3>
+        <p class="text-sm text-gray-600 mt-1">Nombres Elegantes y Sofisticados</p>
+      </div>
+      <div data-cat="Nombres Elegantes y Sofisticados" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Glamour Total</h3>
+        <p class="text-sm text-gray-600 mt-1">Nombres Elegantes y Sofisticados</p>
+      </div>
+      <div data-cat="Nombres Elegantes y Sofisticados" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Lujosas Uñas</h3>
+        <p class="text-sm text-gray-600 mt-1">Nombres Elegantes y Sofisticados</p>
+      </div>
+      <div data-cat="Nombres Elegantes y Sofisticados" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Reina del Esmalte</h3>
+        <p class="text-sm text-gray-600 mt-1">Nombres Elegantes y Sofisticados</p>
+      </div>
+      <div data-cat="Nombres Elegantes y Sofisticados" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Alta Manicura</h3>
+        <p class="text-sm text-gray-600 mt-1">Nombres Elegantes y Sofisticados</p>
+      </div>
+      <div data-cat="Nombres Elegantes y Sofisticados" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Perla & Brillo</h3>
+        <p class="text-sm text-gray-600 mt-1">Nombres Elegantes y Sofisticados</p>
+      </div>
+      <div data-cat="Nombres Elegantes y Sofisticados" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Diva Nails</h3>
+        <p class="text-sm text-gray-600 mt-1">Nombres Elegantes y Sofisticados</p>
+      </div>
+      <div data-cat="Nombres Elegantes y Sofisticados" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Esencia Fina</h3>
+        <p class="text-sm text-gray-600 mt-1">Nombres Elegantes y Sofisticados</p>
+      </div>
+      <div data-cat="Nombres Elegantes y Sofisticados" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Brillo Real</h3>
+        <p class="text-sm text-gray-600 mt-1">Nombres Elegantes y Sofisticados</p>
+      </div>
+      <div data-cat="Nombres Elegantes y Sofisticados" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Uñas de Cristal</h3>
+        <p class="text-sm text-gray-600 mt-1">Nombres Elegantes y Sofisticados</p>
+      </div>
+      <div data-cat="Nombres Elegantes y Sofisticados" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Estilo Noble</h3>
+        <p class="text-sm text-gray-600 mt-1">Nombres Elegantes y Sofisticados</p>
+      </div>
+      <div data-cat="Nombres Elegantes y Sofisticados" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Estilo Noble</h3>
+        <p class="text-sm text-gray-600 mt-1">Nombres Elegantes y Sofisticados</p>
+      </div>
+      <div data-cat="Nombres Elegantes y Sofisticados" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Uñas de Encanto</h3>
+        <p class="text-sm text-gray-600 mt-1">Nombres Elegantes y Sofisticados</p>
+      </div>
+      <div data-cat="Nombres Elegantes y Sofisticados" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Cuarzo Rosa</h3>
+        <p class="text-sm text-gray-600 mt-1">Nombres Elegantes y Sofisticados</p>
+      </div>
+      <div data-cat="Nombres Elegantes y Sofisticados" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Clásica & Chic</h3>
+        <p class="text-sm text-gray-600 mt-1">Nombres Elegantes y Sofisticados</p>
+      </div>
+      <div data-cat="Nombres Elegantes y Sofisticados" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Brillo de Reina</h3>
+        <p class="text-sm text-gray-600 mt-1">Nombres Elegantes y Sofisticados</p>
+      </div>
+
+
+
+
+
+
+
+
+    
+      <div data-cat="Nombres Creativos y Divertidos" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Uñarte</h3>
+        <p class="text-sm text-gray-600 mt-1">Nombres Creativos y Divertidos</p>
+      </div>
+      <div data-cat="Nombres Creativos y Divertidos" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Colorín Nails</h3>
+        <p class="text-sm text-gray-600 mt-1">Nombres Creativos y Divertidos</p>
+      </div>
+      <div data-cat="Nombres Creativos y Divertidos" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Manimágica</h3>
+        <p class="text-sm text-gray-600 mt-1">Nombres Creativos y Divertidos</p>
+      </div>
+      <div data-cat="Nombres Creativos y Divertidos" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Uñas a Mil</h3>
+        <p class="text-sm text-gray-600 mt-1">Nombres Creativos y Divertidos</p>
+      </div>
+      <div data-cat="Nombres Creativos y Divertidos" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Arcoíris Nails</h3>
+        <p class="text-sm text-gray-600 mt-1">Nombres Creativos y Divertidos</p>
+      </div>
+      <div data-cat="Nombres Creativos y Divertidos" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Divina Manía</h3>
+        <p class="text-sm text-gray-600 mt-1">Nombres Creativos y Divertidos</p>
+      </div>
+      <div data-cat="Nombres Creativos y Divertidos" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Súper Uñas</h3>
+        <p class="text-sm text-gray-600 mt-1">Nombres Creativos y Divertidos</p>
+      </div>
+      <div data-cat="Nombres Creativos y Divertidos" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">PopNails</h3>
+        <p class="text-sm text-gray-600 mt-1">Nombres Creativos y Divertidos</p>
+      </div>
+      <div data-cat="Nombres Creativos y Divertidos" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">ArteManos</h3>
+        <p class="text-sm text-gray-600 mt-1">Nombres Creativos y Divertidos</p>
+      </div>
+      <div data-cat="Nombres Creativos y Divertidos" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Uñitas Pop</h3>
+        <p class="text-sm text-gray-600 mt-1">Nombres Creativos y Divertidos</p>
+      </div>
+      <div data-cat="Nombres Creativos y Divertidos" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Wow Nails</h3>
+        <p class="text-sm text-gray-600 mt-1">Nombres Creativos y Divertidos</p>
+      </div>
+      <div data-cat="Nombres Creativos y Divertidos" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Coloretta</h3>
+        <p class="text-sm text-gray-600 mt-1">Nombres Creativos y Divertidos</p>
+      </div>
+      <div data-cat="Nombres Creativos y Divertidos" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">EsmalteManía</h3>
+        <p class="text-sm text-gray-600 mt-1">Nombres Creativos y Divertidos</p>
+      </div>
+      <div data-cat="Nombres Creativos y Divertidos" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Manos Mágicas</h3>
+        <p class="text-sm text-gray-600 mt-1">Nombres Creativos y Divertidos</p>
+      </div>
+      <div data-cat="Nombres Creativos y Divertidos" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Deditos Felices</h3>
+        <p class="text-sm text-gray-600 mt-1">Nombres Creativos y Divertidos</p>
+      </div>
+      <div data-cat="Nombres Creativos y Divertidos" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Loca por las Uñas</h3>
+        <p class="text-sm text-gray-600 mt-1">Nombres Creativos y Divertidos</p>
+      </div>
+      <div data-cat="Nombres Creativos y Divertidos" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Nailifornia</h3>
+        <p class="text-sm text-gray-600 mt-1">Nombres Creativos y Divertidos</p>
+      </div>
+      <div data-cat="Nombres Creativos y Divertidos" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Pink Punch</h3>
+        <p class="text-sm text-gray-600 mt-1">Nombres Creativos y Divertidos</p>
+      </div>
+
+
+
+
+
+
+      <div data-cat="Nombres Glam y Fashion" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Trendy Nails</h3>
+        <p class="text-sm text-gray-600 mt-1">Nombres Glam y Fashion</p>
+      </div>
+      <div data-cat="Nombres Glam y Fashion" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Chic Studio</h3>
+        <p class="text-sm text-gray-600 mt-1">Nombres Glam y Fashion</p>
+      </div>
+      <div data-cat="Nombres Glam y Fashion" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Fashion Tips</h3>
+        <p class="text-sm text-gray-600 mt-1">Nombres Glam y Fashion</p>
+      </div>
+      <div data-cat="Nombres Glam y Fashion" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Uñas Glam</h3>
+        <p class="text-sm text-gray-600 mt-1">Nombres Glam y Fashion</p>
+      </div>
+      <div data-cat="Nombres Glam y Fashion" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Top Coat</h3>
+        <p class="text-sm text-gray-600 mt-1">Nombres Glam y Fashion</p>
+      </div>
+      <div data-cat="Nombres Glam y Fashion" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Esmalte Vogue</h3>
+        <p class="text-sm text-gray-600 mt-1">Nombres Glam y Fashion</p>
+      </div>
+      <div data-cat="Nombres Glam y Fashion" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Uñas Runway</h3>
+        <p class="text-sm text-gray-600 mt-1">Nombres Glam y Fashion</p>
+      </div>
+      <div data-cat="Nombres Glam y Fashion" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Manicure Trend</h3>
+        <p class="text-sm text-gray-600 mt-1">Nombres Glam y Fashion</p>
+      </div>
+      <div data-cat="Nombres Glam y Fashion" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Urban Nails</h3>
+        <p class="text-sm text-gray-600 mt-1">Nombres Glam y Fashion</p>
+      </div>
+      <div data-cat="Nombres Glam y Fashion" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Fancy Fingers</h3>
+        <p class="text-sm text-gray-600 mt-1">Nombres Glam y Fashion</p>
+      </div>
+      <div data-cat="Nombres Glam y Fashion" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Brilla Chic</h3>
+        <p class="text-sm text-gray-600 mt-1">Nombres Glam y Fashion</p>
+      </div>
+      <div data-cat="Nombres Glam y Fashion" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Vogue Tips</h3>
+        <p class="text-sm text-gray-600 mt-1">Nombres Glam y Fashion</p>
+      </div>
+      <div data-cat="Nombres Glam y Fashion" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Uñas de Pasarela</h3>
+        <p class="text-sm text-gray-600 mt-1">Nombres Glam y Fashion</p>
+      </div>
+      <div data-cat="Nombres Glam y Fashion" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">FlashNail</h3>
+        <p class="text-sm text-gray-600 mt-1">Nombres Glam y Fashion</p>
+      </div>
+      <div data-cat="Nombres Glam y Fashion" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Glossy Nails</h3>
+        <p class="text-sm text-gray-600 mt-1">Nombres Glam y Fashion</p>
+      </div>
+      <div data-cat="Nombres Glam y Fashion" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Polished Babe</h3>
+        <p class="text-sm text-gray-600 mt-1">Nombres Glam y Fashion</p>
+      </div>
+      <div data-cat="Nombres Glam y Fashion" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Nail Couture</h3>
+        <p class="text-sm text-gray-600 mt-1">Nombres Glam y Fashion</p>
+      </div>
+      <div data-cat="Nombres Glam y Fashion" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">The Nail Edit</h3>
+        <p class="text-sm text-gray-600 mt-1">Nombres Glam y Fashion</p>
+      </div>
+      <div data-cat="Nombres Glam y Fashion" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Glam Studio</h3>
+        <p class="text-sm text-gray-600 mt-1">Nombres Glam y Fashion</p>
+      </div>
+      <div data-cat="Nombres Glam y Fashion" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Pink & Gold</h3>
+        <p class="text-sm text-gray-600 mt-1">Nombres Glam y Fashion</p>
+      </div>
+
+
+
+      
+
+
+      <div data-cat="Nombres Naturales y Zen" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Uñas de Loto</h3>
+        <p class="text-sm text-gray-600 mt-1">Nombres Naturales y Zen</p>
+      </div>
+      <div data-cat="Nombres Naturales y Zen" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Calm Nails</h3>
+        <p class="text-sm text-gray-600 mt-1">Nombres Naturales y Zen</p>
+      </div>
+      <div data-cat="Nombres Naturales y Zen" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Estilo Orgánico</h3>
+        <p class="text-sm text-gray-600 mt-1">Nombres Naturales y Zen</p>
+      </div>
+      <div data-cat="Nombres Naturales y Zen" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Manos Zen</h3>
+        <p class="text-sm text-gray-600 mt-1">Nombres Naturales y Zen</p>
+      </div>
+      <div data-cat="Nombres Naturales y Zen" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Esencia Natural</h3>
+        <p class="text-sm text-gray-600 mt-1">Nombres Naturales y Zen</p>
+      </div>
+      <div data-cat="Nombres Naturales y Zen" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Brisa & Esmalte3</h3>
+        <p class="text-sm text-gray-600 mt-1">Nombres Naturales y Zen</p>
+      </div>
+      <div data-cat="Nombres Naturales y Zen" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Uñas Raíces</h3>
+        <p class="text-sm text-gray-600 mt-1">Nombres Naturales y Zen</p>
+      </div>
+      <div data-cat="Nombres Naturales y Zen" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Alma Rosa</h3>
+        <p class="text-sm text-gray-600 mt-1">Nombres Naturales y Zen</p>
+      </div>
+      <div data-cat="Nombres Naturales y Zen" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Jardín de Uñas</h3>
+        <p class="text-sm text-gray-600 mt-1">Nombres Naturales y Zen</p>
+      </div>
+      <div data-cat="Nombres Naturales y Zen" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Serenidad Nails</h3>
+        <p class="text-sm text-gray-600 mt-1">Nombres Naturales y Zen</p>
+      </div>
+      <div data-cat="Nombres Naturales y Zen" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Tierra y Uñas</h3>
+        <p class="text-sm text-gray-600 mt-1">Nombres Naturales y Zen</p>
+      </div>
+      <div data-cat="Nombres Naturales y Zen" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Uñas Botánicas</h3>
+        <p class="text-sm text-gray-600 mt-1">Nombres Naturales y Zen</p>
+      </div>
+      <div data-cat="Nombres Naturales y Zen" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Pétalo Studio</h3>
+        <p class="text-sm text-gray-600 mt-1">Nombres Naturales y Zen</p>
+      </div>
+      <div data-cat="Nombres Naturales y Zen" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Bamboo Nails</h3>
+        <p class="text-sm text-gray-600 mt-1">Nombres Naturales y Zen</p>
+      </div>
+      <div data-cat="Nombres Naturales y Zen" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Uña & Flor</h3>
+        <p class="text-sm text-gray-600 mt-1">Nombres Naturales y Zen</p>
+      </div>
+            <div data-cat="Nombres Naturales y Zen" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Uña & Flor</h3>
+        <p class="text-sm text-gray-600 mt-1">Nombres Naturales y Zen</p>
+      </div>
+            <div data-cat="Nombres Naturales y Zen" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Brillo Puro</h3>
+        <p class="text-sm text-gray-600 mt-1">Nombres Naturales y Zen</p>
+      </div>
+            <div data-cat="Nombres Naturales y Zen" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Paz en Tus Manos</h3>
+        <p class="text-sm text-gray-600 mt-1">Nombres Naturales y Zen</p>
+      </div>
+            <div data-cat="Nombres Naturales y Zen" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Aura Nails</h3>
+        <p class="text-sm text-gray-600 mt-1">Nombres Naturales y Zen</p>
+      </div>
+            <div data-cat="Nombres Naturales y Zen" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Mandala Studio</h3>
+        <p class="text-sm text-gray-600 mt-1">Nombres Naturales y Zen</p>
+      </div>
+
+
+
+
+
+
+
+
+      <div data-cat="Nombres con Sabor Latino / Colombiano" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Uñas Caribeñas</h3>
+        <p class="text-sm text-gray-600 mt-1">Nombres con Sabor Latino / Colombiano</p>
+      </div>
+      <div data-cat="Nombres con Sabor Latino / Colombiano" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Café y Uñas</h3>
+        <p class="text-sm text-gray-600 mt-1">Nombres con Sabor Latino / Colombiano</p>
+      </div>
+      <div data-cat="Nombres con Sabor Latino / Colombiano" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Sabrosura Nails</h3>
+        <p class="text-sm text-gray-600 mt-1">Nombres con Sabor Latino / Colombiano</p>
+      </div>
+      <div data-cat="Nombres con Sabor Latino / Colombiano" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Manos Paisas</h3>
+        <p class="text-sm text-gray-600 mt-1">Nombres con Sabor Latino / Colombiano</p>
+      </div>
+      <div data-cat="Nombres con Sabor Latino / Colombiano" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Cumbia Color</h3>
+        <p class="text-sm text-gray-600 mt-1">Nombres con Sabor Latino / Colombiano</p>
+      </div>
+      <div data-cat="Nombres con Sabor Latino / Colombiano" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Brillo de Café</h3>
+        <p class="text-sm text-gray-600 mt-1">Nombres con Sabor Latino / Colombiano</p>
+      </div>
+      <div data-cat="Nombres con Sabor Latino / Colombiano" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Uñas Tropicales</h3>
+        <p class="text-sm text-gray-600 mt-1">Nombres con Sabor Latino / Colombiano</p>
+      </div>
+      <div data-cat="Nombres con Sabor Latino / Colombiano" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Arepa Nails</h3>
+        <p class="text-sm text-gray-600 mt-1">Nombres con Sabor Latino / Colombiano</p>
+      </div>
+      <div data-cat="Nombres con Sabor Latino / Colombiano" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Uñas con Sazón</h3>
+        <p class="text-sm text-gray-600 mt-1">Nombres con Sabor Latino / Colombiano</p>
+      </div>
+      <div data-cat="Nombres con Sabor Latino / Colombiano" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Colombian Chic</h3>
+        <p class="text-sm text-gray-600 mt-1">Nombres con Sabor Latino / Colombiano</p>
+      </div>
+      <div data-cat="Nombres con Sabor Latino / Colombiano" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Sabor a Brillo</h3>
+        <p class="text-sm text-gray-600 mt-1">Nombres con Sabor Latino / Colombiano</p>
+      </div>
+      <div data-cat="Nombres con Sabor Latino / Colombiano" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Tropinails</h3>
+        <p class="text-sm text-gray-600 mt-1">Nombres con Sabor Latino / Colombiano</p>
+      </div>
+      <div data-cat="Nombres con Sabor Latino / Colombiano" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Esmalte Cafetero</h3>
+        <p class="text-sm text-gray-600 mt-1">Nombres con Sabor Latino / Colombiano</p>
+      </div>
+      <div data-cat="Nombres con Sabor Latino / Colombiano" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Uñas con Ritmo</h3>
+        <p class="text-sm text-gray-600 mt-1">Nombres con Sabor Latino / Colombiano</p>
+      </div>
+      <div data-cat="Nombres con Sabor Latino / Colombiano" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Color Guayaba</h3>
+        <p class="text-sm text-gray-600 mt-1">Nombres con Sabor Latino / Colombiano</p>
+      </div>
+      <div data-cat="Nombres con Sabor Latino / Colombiano" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Nail Colombia</h3>
+        <p class="text-sm text-gray-600 mt-1">Nombres con Sabor Latino / Colombiano</p>
+      </div>
+      <div data-cat="Nombres con Sabor Latino / Colombiano" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Uñas Candela</h3>
+        <p class="text-sm text-gray-600 mt-1">Nombres con Sabor Latino / Colombiano</p>
+      </div>
+      <div data-cat="Nombres con Sabor Latino / Colombiano" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Viva Color</h3>
+        <p class="text-sm text-gray-600 mt-1">Nombres con Sabor Latino / Colombiano</p>
+      </div>
+      <div data-cat="Nombres con Sabor Latino / Colombiano" class="p-6 bg-white shadow-md rounded-xl border-l-4 border-principal">
+        <h3 class="text-lg font-bold text-principal">Uñas de mi Tierra</h3>
+        <p class="text-sm text-gray-600 mt-1">Nombres con Sabor Latino / Colombiano</p>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    function filtrar(categoria) {
+      const tarjetas = document.querySelectorAll('#lista-nombres > div');
+      tarjetas.forEach(tarjeta => {
+        if (tarjeta.dataset.cat === categoria || categoria === '') {
+          tarjeta.classList.remove('hidden');
+        } else {
+          tarjeta.classList.add('hidden');
+        }
+      });
+    }
+  </script>
+</body>
+<footer class="m-8 w-auto  py-4 text-white" style="background-color: #00c4cc;">
+  <div class="container mx-auto text-center">
+    <p>© 2025 INSPIRA NEGOCIOS. Todos los derechos reservados.</p>
+  </div>
+</footer>
+</html>
